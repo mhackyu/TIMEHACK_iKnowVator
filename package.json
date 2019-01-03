@@ -1,0 +1,29 @@
+{
+  "name": "timehack_iknowvator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mhackyu/TIMEHACK_iKnowVator.git"
+  },
+  "keywords": [
+    "chatbot",
+    "ibm",
+    "watson",
+    "vue"
+  ],
+  "author": "iKnowVator",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/mhackyu/TIMEHACK_iKnowVator/issues"
+  },
+  "homepage": "https://github.com/mhackyu/TIMEHACK_iKnowVator#readme",
+  "dependencies": {
+    "helmet": "^3.15.0",
+    "watson-developer-cloud": "^3.15.0"
+  }
+}
