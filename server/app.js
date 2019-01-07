@@ -1,7 +1,7 @@
 const express = require('express');
 const helmet = require('helmet');
 const util = require('util');
-const { db, logger } = require('./helpers');
+const { logger, auth } = require('./helpers');
 
 require('dotenv').config();
 const PORT = process.env.PORT || 3000;
@@ -10,11 +10,16 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(helmet());
+app.use(auth.initialize());
+
 // Request Info Middleware
 app.use((req, res, next) => {
-  logger.info(`${req.method} ${req.url}`);
-  logger.info(`BODY ${util.inspect(req.body, false, null)}`);
-  logger.info(`PARAMS ${util.inspect(req.params, false, null)}`);
+  const i = {
+    REQ: `${req.method} ${req.url}`,
+    BODY: util.inspect(req.body, false, null),
+    PARAMS: util.inspect(req.params, false, null)
+  };
+  logger.info(util.inspect(i, false, ));
   next();
 });
 
@@ -23,11 +28,17 @@ app.listen(PORT, () => {
 });
 
 app.get('/', (req, res) => {
-  res.send({ msg: 'We are Team iKnowVator' });
+  res.send({ msg: 'We are Team iKnowVator'});
 });
 
+app.get('/login', (req, res) => {
+  res.send('Welcome to login page');
+});
+
+const authenticate = require('./modules/auth');
 const user = require('./modules/users');
 const wa = require('./modules/watson-assistant');
 
+app.use('/auth', authenticate);
 app.use('/api/users', user);
 app.use('/api/send', wa);

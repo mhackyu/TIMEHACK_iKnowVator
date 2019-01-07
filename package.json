@@ -21,9 +21,5 @@
   "bugs": {
     "url": "https://github.com/mhackyu/TIMEHACK_iKnowVator/issues"
   },
-  "homepage": "https://github.com/mhackyu/TIMEHACK_iKnowVator#readme",
-  "dependencies": {
-    "helmet": "^3.15.0",
-    "watson-developer-cloud": "^3.15.0"
-  }
+  "homepage": "https://github.com/mhackyu/TIMEHACK_iKnowVator#readme"
 }
