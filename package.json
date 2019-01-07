@@ -24,6 +24,7 @@
   "homepage": "https://github.com/mhackyu/TIMEHACK_iKnowVator#readme",
   "dependencies": {
     "helmet": "^3.15.0",
+    "npm": "^6.5.0",
     "watson-developer-cloud": "^3.15.0"
   }
 }
