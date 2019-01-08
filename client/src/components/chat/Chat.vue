@@ -72,6 +72,6 @@
 </template>
 
 
-<style>
-@import "../css/chat.css";
+<style scoped>
+@import "./chat.css";
 </style>
