@@ -5,8 +5,8 @@
 <script>
 export default {
   created() {
-    this.$store.dispatch('setAuthToken', this.$route.params.token);
-    this.$router.push('/');
+    this.$store.dispatch('auth/setAuthToken', this.$route.params.token);
+    window.location.href = '/';
   },
 }
 </script>

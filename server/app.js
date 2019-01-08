@@ -19,16 +19,23 @@ app.use((req, res, next) => {
     BODY: util.inspect(req.body, false, null),
     PARAMS: util.inspect(req.params, false, null)
   };
-  logger.info(util.inspect(i, false, ));
+  logger.info(util.inspect(i, false));
   next();
 });
+
+const cors = require('cors');
+
+app.use(cors({
+  origin: 'http://localhost:8080',
+  credentials: true
+}));
 
 app.listen(PORT, () => {
   console.log(`Listening to PORT ${PORT}`);
 });
 
 app.get('/', (req, res) => {
-  res.send({ msg: 'We are Team iKnowVator'});
+  res.send({ msg: 'We are Team iKnowVator' });
 });
 
 app.get('/login', (req, res) => {

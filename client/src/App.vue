@@ -18,9 +18,7 @@ export default {
     }
   },
   computed: {
-    ...mapState({
-      authToken: 'authToken',
-    }),
+    ...mapState('auth', ['authToken'])
   },
   components: {
     NavBar,

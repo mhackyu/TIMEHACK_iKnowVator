@@ -12,7 +12,7 @@ import Login from '../components/login/Login.vue';
 
 export default {
   computed: {
-    ...mapState(['authToken']),
+    ...mapState('auth', ['authToken'])
   },
   components: {
     Chat,

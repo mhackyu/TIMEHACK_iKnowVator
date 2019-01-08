@@ -71,7 +71,6 @@
   </div>
 </template>
 
-
 <style scoped>
 @import "./chat.css";
 </style>
