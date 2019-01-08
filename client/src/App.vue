@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
-      <NavBar v-if="isAuth" />
+      <NavBar />
     </div>
     <router-view/>
   </div>
@@ -19,7 +19,7 @@ export default {
   },
   computed: {
     ...mapState({
-      isAuth: 'isAuth',
+      authToken: 'authToken',
     }),
   },
   components: {
