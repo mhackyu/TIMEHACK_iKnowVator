@@ -12,11 +12,12 @@ const assistant = new watson.AssistantV1({
   url: process.env.WA_URL
 });
 
-const sendMessage = text => {
+const sendMessage = (text, context) => {
   return new Promise((resolve, reject) => {
     assistant.message(
       {
         workspace_id: process.env.WA_ID,
+        context: context || {},
         input: { text }
       },
       (err, result, response) => {

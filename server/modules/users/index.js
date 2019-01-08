@@ -1,12 +1,8 @@
-const TAG = '[USER_MODULE]';
 const router = require('express').Router();
-const { logger } = require('../../helpers');
 const user = require('./models/User');
+const mw = require('../../middlewares/JWT');
 
-router.get('/', (req, res) => {
-  const ACTION = '[GET_USER]';
-  logger.info(`${TAG}${ACTION}`);
-
+router.get('/', mw.verifyToken, (req, res) => {
   user.getAll()
     .then(result => {
       res.send(result);
