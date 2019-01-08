@@ -2,7 +2,8 @@ const TAG = '[AUTH_MODULE]';
 const router = require('express').Router();
 const { logger, auth, jwt } = require('../../helpers');
 const u = require('../users/models/User');
-const jwtt = require('jsonwebtoken');
+
+require('dotenv').config();
 
 router.get(
   '/google',
@@ -28,13 +29,13 @@ router.get(
             // If user is successfully created then sign jwt.
             const token = await jwt.sign({ user: userInfo });
             logger.info(`[JWT] ${token}`);
-            res.send({ token });
+            res.redirect(`${process.env.GOOGLE_REDIRECT_URL}/${token}`);
           }
         } else {
           // Sign existing user
           const token = await jwt.sign({ user });
           logger.info(`[JWT] ${token}`);
-          res.send({ token });
+          res.redirect(`${process.env.GOOGLE_REDIRECT_URL}/${token}`);
         }
       } catch (err) {
         // Redirect back to login page if any errors are encountered.
