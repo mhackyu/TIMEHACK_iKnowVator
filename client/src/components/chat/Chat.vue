@@ -5,65 +5,27 @@
       <div class="inbox_msg">
         <div class="mesgs">
           <div class="msg_history">
-            <div class="incoming_msg">
-              <div class="incoming_msg_img">
-                <img src="https://emoji.slack-edge.com/T91BPUL04/jodie_smiley_max/6f1c71bdf2523319.jpg">
-              </div>
-              <div class="received_msg">
-                <div class="received_withd_msg">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                  </p>
-                  <!-- <span class="time_date">11:01 AM | June 9</span> -->
-                </div>
-              </div>
+            <div v-for="(msg, index) in messages" :key="index">
+              <chat-incoming 
+                v-if="!msg.isOwner"
+                :author="msg.author" 
+                :msg="msg.message"
+              />
+              <chat-outgoing 
+                v-else
+                :author="msg.author" 
+                :msg="msg.message"
+              />
             </div>
-            <div class="outgoing_msg">
-              <div class="sent_msg">
-                <p>
-                  Ratione repellat dolorum earum dignissimos eligendi qui aspernatur autem, nam saepe obcaecati maiores cupiditate modi quasi quo voluptate hic nesciunt tempore excepturi.
-                </p>
-                <!-- <span class="time_date">11:01 AM | June 9</span> -->
-              </div>
-            </div>
-            <div class="incoming_msg">
-              <div class="incoming_msg_img">
-                <img src="https://emoji.slack-edge.com/T91BPUL04/jodie_smiley_max/6f1c71bdf2523319.jpg">
-              </div>
-              <div class="received_msg">
-                <div class="received_withd_msg">
-                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
-                  <!-- <span class="time_date">11:01 AM | Yesterday</span> -->
-                </div>
-              </div>
-            </div>
-            <div class="outgoing_msg">
-              <div class="sent_msg">
-                <p>Debitis totam culpa odit voluptas fugiat ratione accusamus officiis voluptatum ipsa sapiente unde explicabo consequatur, ipsam cum officia. Vero odit aperiam quibusdam!</p>
-                <!-- <span class="time_date">11:01 AM | Today</span> -->
-              </div>
-            </div>
-            <div class="incoming_msg">
-              <div class="incoming_msg_img">
-                <img src="https://emoji.slack-edge.com/T91BPUL04/jodie_smiley_max/6f1c71bdf2523319.jpg">
-              </div>
-              <div class="received_msg">
-                <div class="received_withd_msg">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias modi numquam voluptates! Culpa est exercitationem minus debitis voluptatibus maxime voluptate eius magni molestias, nulla ducimus, corrupti unde impedit, quibusdam dolorem!
-                  </p>
-                  <!-- <span class="time_date">11:01 AM | Today</span> -->
-                </div>
-              </div>
-            </div>
+            <p v-show="isSending">Sab is typing...</p>
           </div>
           <div class="type_msg">
-            <div class="input_msg_write">
-              <input type="text" class="write_msg" placeholder="Type a message">
-              <button class="msg_send_btn" type="button">
+            <form class="input_msg_write" @submit.prevent="send">
+              <input type="text" class="write_msg" placeholder="Your message" v-model="message"> 
+              <button class="msg_send_btn" type="button"> 
                 <i class="small material-icons">send</i>
               </button>
-            </div>
+            </form>
           </div>
         </div>
       </div>
@@ -71,6 +33,41 @@
   </div>
 </template>
 
+<script>
+import { mapState } from 'vuex';
+import ChatIncoming from './ChatIncoming.vue';
+import ChatOutgoing from './ChatOutgoing.vue';
+
+export default {
+  data() {
+    return {
+      message: '',
+    };
+  },
+  computed: {
+    ...mapState('user', { user: 'info' }),
+    ...mapState('chat', ['messages', 'isSending']),
+  },
+  components: {
+    ChatIncoming,
+    ChatOutgoing
+  },
+  mounted() {
+    this.$store.dispatch('chat/sendMessage', '');
+  },
+  methods: {
+    send() {
+      const msg = {
+        isOwner: true,
+        author: this.user.display_name,
+        message: this.message
+      };
+      this.$store.dispatch('chat/sendMessage', msg);
+      this.message = '';
+    }
+  }
+}
+</script>
 
 <style scoped>
 @import "./chat.css";
