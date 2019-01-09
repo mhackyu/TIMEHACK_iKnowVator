@@ -12,6 +12,5 @@ export default new Vuex.Store({
     auth,
     user,
     chat
-    user
   }
 });
