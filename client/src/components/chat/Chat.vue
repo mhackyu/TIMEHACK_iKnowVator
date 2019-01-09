@@ -4,7 +4,7 @@
     <div class="messaging">
       <div class="inbox_msg">
         <div class="mesgs">
-          <div class="msg_history">
+          <div ref="msgHistory" class="msg_history">
             <div v-for="(msg, index) in messages" :key="index">
               <chat-incoming v-if="!msg.isOwner" :author="msg.author" :msg="msg.message"/>
               <chat-outgoing v-else :author="msg.author" :msg="msg.message"/>
@@ -39,6 +39,9 @@ export default {
   computed: {
     ...mapState('user', { user: 'info' }),
     ...mapState('chat', ['messages', 'isSending', 'context']),
+    canSend() {
+      return this.message != '' ? true : false;
+    }
   },
   components: {
     ChatIncoming,
@@ -49,6 +52,7 @@ export default {
   },
   methods: {
     send() {
+      if (!this.canSend) return;
       const msg = {
         isOwner: true,
         author: this.user.display_name,
@@ -57,7 +61,13 @@ export default {
       this.$store.dispatch('chat/sendMessage', { msg, context: this.context });
       this.message = '';
     }
-  }
+  },
+  watch: {
+    messages() {
+      const h = this.$refs.msgHistory;
+      h.scrollTop = h.scrollHeight;
+    }
+  },
 }
 </script>
 
