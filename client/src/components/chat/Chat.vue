@@ -13,9 +13,9 @@
           </div>
           <div class="type_msg">
             <form class="input_msg_write" @submit.prevent="send">
-              <input type="text" class="write_msg" placeholder="Type your message..." v-model="message">
-              <button class="msg_send_btn" type="submit">
-                Send
+              <input type="text" class="write_msg" placeholder="Your message" v-model="message">
+              <button class="msg_send_btn" type="button">
+                <i class="small material-icons">send</i>
               </button>
             </form>
           </div>
