@@ -1,12 +1,17 @@
 import { ChatService } from '../../services';
 
 export default {
-  async sendMessage({ commit }, message) {
+  async sendMessage({ commit }, data) {
     commit('TOGGLE_SENDING', true);
-    if (message != '') commit('ADD_MESSAGE', message);
+    // push user message
+    if (data.msg != '') commit('ADD_MESSAGE', data.msg);
+    const text = data.msg.message;
+    const context = data.context;
     const chat = await ChatService.send({
-      text: message.message,
+      text,
+      context, 
     });
+    commit('SET_CONTEXT', chat.context);
     chat.output.text.map(text => {
       const msg = {
         isOwner: false,

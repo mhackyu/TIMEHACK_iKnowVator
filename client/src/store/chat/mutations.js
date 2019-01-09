@@ -5,6 +5,12 @@ export default {
   CLEAR_MESSAGES(state) {
     state.messages = [];
   },
+  SET_CONTEXT(state, context) {
+    state.context = context;
+  },
+  CLEAR_CONTEXT(state) {
+    state.context = {};
+  },
   TOGGLE_SENDING(state, isSending) {
     state.isSending = isSending;
   },
