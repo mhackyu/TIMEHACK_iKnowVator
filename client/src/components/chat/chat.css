@@ -38,7 +38,6 @@ img{ max-width:100%; border-radius: 50%;}
 
 .incoming_msg_img {
   display: inline-block;
-  width: 6%;
 }
 .received_msg {
   display: inline-block;
@@ -47,12 +46,9 @@ img{ max-width:100%; border-radius: 50%;}
   width: 92%;
  }
  .received_withd_msg p {
-  background: #ebebeb none repeat scroll 0 0;
-  border-radius: 30px;
   color: rgba(0, 0, 0, 1);
-  font-size: 14px;
+  font-size: 16px;
   margin: 0;
-  margin-bottom: 2px;
   padding: 5px 10px 5px 12px;
   width: 100%;
   font-family: Helvetica, Arial, sans-serif;
@@ -74,23 +70,22 @@ img{ max-width:100%; border-radius: 50%;}
 }
 
  .sent_msg p {
-  border-radius: 30px;
-  font-size: 14px;
-  margin: 0;
-  margin-bottom: 2px;
+  font-size: 16px;
+  margin: 0; 
   color:#fff;
   padding: 5px 10px 5px 12px;
   width:100%;
   font-family: Helvetica, Arial, sans-serif;
 }
-.outgoing_msg{ overflow:hidden; margin:26px 0 26px;}
+.incoming_msg{ overflow:hidden; margin:2px;}
+.outgoing_msg{ overflow:hidden; margin:2px;}
+
 .sent_msg {
   border-radius: 30px;
   float: right;
   background: #0084ff;
   color: #fff;
 }
-
 .input_msg_write input {
   background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
   border: medium none;
@@ -102,7 +97,7 @@ img{ max-width:100%; border-radius: 50%;}
 
 .type_msg {border-top: 1px solid #c4c4c4;position: relative;}
 .msg_send_btn {
-  background: #365899;
+  background: #365899 none repeat scroll 0 0;
   border: medium none;
   color: #fff;
   cursor: pointer;
@@ -112,7 +107,6 @@ img{ max-width:100%; border-radius: 50%;}
   right: 0;
   top: 11px;
   width: 66px;
-  font-family: Helvetica, Arial, sans-serif;
 }
 .messaging { padding: 0 0 50px 0;}
 .msg_history {
