@@ -6,23 +6,15 @@
         <div class="mesgs">
           <div class="msg_history">
             <div v-for="(msg, index) in messages" :key="index">
-              <chat-incoming 
-                v-if="!msg.isOwner"
-                :author="msg.author" 
-                :msg="msg.message"
-              />
-              <chat-outgoing 
-                v-else
-                :author="msg.author" 
-                :msg="msg.message"
-              />
+              <chat-incoming v-if="!msg.isOwner" :author="msg.author" :msg="msg.message"/>
+              <chat-outgoing v-else :author="msg.author" :msg="msg.message"/>
             </div>
             <p v-show="isSending">Sab is typing...</p>
           </div>
           <div class="type_msg">
             <form class="input_msg_write" @submit.prevent="send">
-              <input type="text" class="write_msg" placeholder="Your message" v-model="message"> 
-              <button class="msg_send_btn" type="button"> 
+              <input type="text" class="write_msg" placeholder="Your message" v-model="message">
+              <button class="msg_send_btn" type="button">
                 <i class="small material-icons">send</i>
               </button>
             </form>
@@ -46,14 +38,14 @@ export default {
   },
   computed: {
     ...mapState('user', { user: 'info' }),
-    ...mapState('chat', ['messages', 'isSending']),
+    ...mapState('chat', ['messages', 'isSending', 'context']),
   },
   components: {
     ChatIncoming,
     ChatOutgoing
   },
   mounted() {
-    this.$store.dispatch('chat/sendMessage', '');
+    this.$store.dispatch('chat/sendMessage', { msg: '' });
   },
   methods: {
     send() {
@@ -62,7 +54,7 @@ export default {
         author: this.user.display_name,
         message: this.message
       };
-      this.$store.dispatch('chat/sendMessage', msg);
+      this.$store.dispatch('chat/sendMessage', { msg, context: this.context });
       this.message = '';
     }
   }
