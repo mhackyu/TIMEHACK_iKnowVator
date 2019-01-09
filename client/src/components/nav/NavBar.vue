@@ -20,6 +20,10 @@
         <li class="nav-item">
           <router-link class="nav-link" to="/about">About</router-link>
         </li>
+      </ul>
+    </div>
+    <div class="mx-auto order-0">
+      <ul class="navbar-nav mr-auto">
         <li class="nav-item" v-if="authToken">
           <a class="nav-link" @click="logout">Logout</a>
         </li>
