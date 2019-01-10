@@ -54,7 +54,7 @@ export default {
     ChatOptionList
   },
   mounted() {
-    this.$store.dispatch('chat/sendMessage', { msg: '' });
+    if (this.messages.length === 0) this.$store.dispatch('chat/sendMessage', { msg: '' });
   },
   methods: {
     send() {
