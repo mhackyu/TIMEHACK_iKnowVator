@@ -14,4 +14,10 @@ export default {
   TOGGLE_SENDING(state, isSending) {
     state.isSending = isSending;
   },
+  SET_GENERIC(state, generic) {
+    state.generic = generic;
+  },
+  CLEAR_GENERIC(state) {
+    state.generic = [];
+  },
 }
