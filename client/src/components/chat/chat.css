@@ -107,9 +107,14 @@ img{ max-width:100%; border-radius: 50%;}
   right: 0;
   top: 11px;
   width: 66px;
+  font-weight: bold;
+  line-height: 32px;
+  max-width: 80px;
+  min-width: 33px;
+  border-radius: 30px;
 }
 .messaging { padding: 0 0 50px 0;}
 .msg_history {
   height: 516px;
   overflow-y: auto;
-}
+} 

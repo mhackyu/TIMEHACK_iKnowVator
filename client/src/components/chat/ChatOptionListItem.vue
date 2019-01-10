@@ -1,5 +1,5 @@
 <template>
-  <li class="item" @click="send(option)">{{ option.label }}</li>
+  <button class="btn btn-link btn-block" role="presentation" @click="send(option)">{{ option.label }}</button>
 </template>
 
 <script>
@@ -27,9 +27,10 @@ export default {
 </script>
 
 <style scoped>
-.item {
-  border: 1px solid black;
-  margin: 6px;
-  padding: 6px;
+.btn-link {
+  margin: 2px;
+  border-radius: 30px;
+  background: #0084ff;
+  color: #fff;
 }
 </style>
