@@ -14,7 +14,7 @@ router.get('/', mw.verifyToken, (req, res) => {
 });
 
 router.get('/me', mw.verifyToken, (req, res) => {
-  res.send(req.user.user);
+  res.send(req.user);
 });
 
 module.exports = router;

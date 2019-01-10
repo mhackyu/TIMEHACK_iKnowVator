@@ -13,7 +13,7 @@ module.exports.verifyToken = (req, res, next) => {
       if (err) {
         res.send(errors.raise('UNAUTHORIZED'));
       } else {
-        req.user = decoded;
+        req.user = decoded.user;
         next();
       }
     });
