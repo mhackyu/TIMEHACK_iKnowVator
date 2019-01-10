@@ -43,9 +43,11 @@ app.get('/login', (req, res) => {
 });
 
 const authenticate = require('./modules/auth');
-const user = require('./modules/users');
 const wa = require('./modules/watson-assistant');
+const user = require('./modules/users');
+const expense = require('./modules/expense');
 
 app.use('/auth', authenticate);
-app.use('/api/users', user);
 app.use('/api/send', wa);
+app.use('/api/users', user);
+app.use('/api/expenses', expense);
