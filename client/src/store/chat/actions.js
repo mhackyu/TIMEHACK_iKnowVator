@@ -13,8 +13,6 @@ export default {
       text,
       context
     });
-    
-    commit('SET_CONTEXT', chat.context);
     chat.output.text.map(text => {
       const msg = {
         isOwner: false,
@@ -23,6 +21,7 @@ export default {
       };
       commit('ADD_MESSAGE', msg);
     });
+    commit('SET_CONTEXT', chat.context);
     commit('SET_GENERIC', chat.output.generic);
     commit('TOGGLE_SENDING', false);
   }
