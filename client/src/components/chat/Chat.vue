@@ -6,8 +6,8 @@
         <div class="mesgs">
           <div ref="msgHistory" class="msg_history">
             <div v-for="(msg, index) in messages" :key="index">
-              <chat-incoming v-if="!msg.isOwner" :author="msg.author" :msg="msg.message"/>
-              <chat-outgoing v-else :author="msg.author" :msg="msg.message"/>
+              <chat-incoming v-if="!msg.isOwner" :author="msg.author" :msg="msg.message" />
+              <chat-outgoing v-else :author="msg.author" :msg="msg.message" />
             </div>
             <p v-show="isSending">Sab is typing...</p>
           </div>
@@ -18,6 +18,7 @@
                 Send
               </button>
             </form>
+            <chat-option-list :options="options" />
           </div>
         </div>
       </div>
@@ -26,9 +27,10 @@
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState, mapGetters } from 'vuex';
 import ChatIncoming from './ChatIncoming.vue';
 import ChatOutgoing from './ChatOutgoing.vue';
+import ChatOptionList from './ChatOptionList.vue';
 
 export default {
   data() {
@@ -39,13 +41,17 @@ export default {
   computed: {
     ...mapState('user', { user: 'info' }),
     ...mapState('chat', ['messages', 'isSending', 'context']),
+    ...mapGetters({
+      options: 'chat/getOptions'
+    }),
     canSend() {
       return this.message != '' ? true : false;
     }
   },
   components: {
     ChatIncoming,
-    ChatOutgoing
+    ChatOutgoing,
+    ChatOptionList
   },
   mounted() {
     this.$store.dispatch('chat/sendMessage', { msg: '' });
