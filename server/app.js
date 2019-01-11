@@ -47,9 +47,13 @@ const wa = require('./modules/watson-assistant');
 const user = require('./modules/users');
 const expense = require('./modules/expense');
 const income = require('./modules/income');
+const savingsGoal = require('./modules/savings-goal');
+const spendingGoal = require('./modules/spending-goal');
 
 app.use('/auth', authenticate);
 app.use('/api/send', wa);
 app.use('/api/users', user);
 app.use('/api/expenses', expense);
 app.use('/api/income', income);
+app.use('/api/savings-goal', savingsGoal);
+app.use('/api/spending-goal', spendingGoal);
