@@ -18,7 +18,8 @@
                 Send
               </button>
             </form>
-            <chat-option-list :options="options" />
+            <p v-show="isError">Something went wrong. Please try again.</p>
+            <chat-option-list v-if="!isSending" :options="options" />
           </div>
         </div>
       </div>
@@ -40,7 +41,7 @@ export default {
   },
   computed: {
     ...mapState('user', { user: 'info' }),
-    ...mapState('chat', ['messages', 'isSending', 'context']),
+    ...mapState('chat', ['messages', 'isSending', 'context', 'isError']),
     ...mapGetters({
       options: 'chat/getOptions'
     }),
