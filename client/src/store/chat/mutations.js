@@ -20,4 +20,7 @@ export default {
   CLEAR_GENERIC(state) {
     state.generic = [];
   },
+  TOGGLE_ERROR(state, isError) {
+    state.isError = isError;
+  }
 }
