@@ -3,5 +3,5 @@ export default {
   generic: [],
   context: {},
   isSending: false,
-  isErrorSending: false
+  isError: false
 }
