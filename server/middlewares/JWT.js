@@ -11,13 +11,13 @@ module.exports.verifyToken = (req, res, next) => {
     const bearerToken = bearerHeader.split(' ')[1];
     jwt.verify(bearerToken, SECRET_KEY, (err, decoded) => {
       if (err) {
-        res.send(errors.raise('UNAUTHORIZED'));
+        res.status(401).send(errors.raise('UNAUTHORIZED'));
       } else {
         req.user = decoded.user;
         next();
       }
     });
   } else {
-    res.send(errors.raise('UNAUTHORIZED'));
+    res.status(401).send(errors.raise('UNAUTHORIZED'));
   }
 };
