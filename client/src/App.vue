@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <div id="nav" v-if="$route.name !== 'auth'">
       <NavBar />
     </div>
     <router-view/>
@@ -12,13 +12,8 @@ import { mapState } from 'vuex';
 import NavBar from './components/nav/NavBar.vue';
 
 export default {
-  data() {
-    return {
-
-    }
-  },
   computed: {
-    ...mapState('auth', ['authToken'])
+    ...mapState('auth', ['authToken']),
   },
   components: {
     NavBar,
