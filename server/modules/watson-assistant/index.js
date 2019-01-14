@@ -12,6 +12,7 @@ router.post('/', mw.verifyToken, async (req, res) => {
       if (typeof actions[botResponse.context.action] === 'function') {
         actions[botResponse.context.action](botResponse, req.user)
           .then(result => {
+            botResponse.context.actionResult = result;
             res.send(botResponse);
           })
           .catch(err => {
