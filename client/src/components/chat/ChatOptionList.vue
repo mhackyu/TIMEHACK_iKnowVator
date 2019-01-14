@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="option" v-for="(item, index) in options" :key="index">
-      <ul v-for="(option, index) in item.options" :key="index">
+      <div v-for="(option, index) in item.options" :key="index">
         <chat-option-list-item :option="option" />
-      </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -22,9 +22,5 @@ export default {
 </script>
 
 <style scoped>
-.option {
-  border: 1px solid red;
-  margin-top: 10px;
-}
 </style>
 
