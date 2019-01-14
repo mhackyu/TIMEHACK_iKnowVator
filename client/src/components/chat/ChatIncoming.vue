@@ -5,18 +5,24 @@
     </div>
     <div class="received_msg">
       <div class="received_withd_msg">
-        <p>{{ msg }}</p>
-        <!-- <span class="time_date">11:01 AM | Yesterday</span> -->
+        <p>{{ msg.message }}</p>
+        <div v-if="msg.list.length > 0">
+          <chat-list :msg="msg" />
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import ChatList from './ChatList.vue';
+
 export default {
   props: {
-    author: String,
-    msg: String,
+    msg: Object,
+  },
+  components: {
+    ChatList,
   }
 }
 </script>

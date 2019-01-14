@@ -13,32 +13,22 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav mr-auto">
-        <!-- <li class="nav-item">
-          <router-link class="nav-link" to="/">Home</router-link>
-        </li> -->
-        <!-- <li class="nav-item">
-          <router-link class="nav-link" to="/about">About</router-link>
-        </li> -->
-      </ul>
     </div>
     <div class="mx-auto order-0">
       <ul class="navbar-nav mr-auto">
-
         <li class="nav-item" v-if="authToken">
           <div id="customBtn" class="customGPlusSignIn">
             <a @click="logout">
-            <span class="icon"></span>
+            <img :src="user.avatar" v-if="user" height="40px"/>
             <span class="buttonText">Sign out</span>
             </a>
           </div>
         </li>
-
         <li class="nav-item" v-else>
           <div id="customBtn" class="customGPlusSignIn">
             <a href="http://localhost:5000/auth/google">
             <span class="icon"></span>
-            <span class="buttonText">Google</span>
+            <span class="buttonText">Sign in</span>
             </a>
           </div>
         </li>

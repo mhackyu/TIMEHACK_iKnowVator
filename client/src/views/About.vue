@@ -68,16 +68,6 @@
   <!-- /.container -->
 </template>
 
-<script>
-export default {
-  data () {
-    return {
-      
-    }
-  }
-}
-</script>
-
 <style scoped>
   pre{
     font-family: 'Avenir', Helvetica, Arial, sans-serif;

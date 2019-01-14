@@ -6,20 +6,23 @@
           <h3 class="text-center">Sabby</h3>
           <div ref="msgHistory" class="msg_history">
             <div v-for="(msg, index) in messages" :key="index">
-              <chat-incoming v-if="!msg.isOwner" :author="msg.author" :msg="msg.message" />
-              <chat-outgoing v-else :author="msg.author" :msg="msg.message" />
+              <chat-incoming v-if="!msg.isOwner" :msg="msg" />
+              <chat-outgoing v-else :msg="msg"/>
             </div>
             <p class="loading" v-show="isSending">Sab is typing...</p>
           </div>
           <div class="type_msg">
             <form class="input_msg_write" @submit.prevent="send">
-              <input type="text" class="write_msg" placeholder="Type your message..." v-model="message">
-              <button class="msg_send_btn" type="submit">
-                Send
-              </button>
+              <input
+                type="text"
+                class="write_msg"
+                placeholder="Type your message..."
+                v-model="message"
+              >
+              <button class="msg_send_btn" type="submit">Send</button>
             </form>
             <p v-show="isError">Something went wrong. Please try again.</p>
-            <chat-option-list v-if="!isSending" :options="options" />
+            <chat-option-list v-if="!isSending" :options="options"/>
           </div>
         </div>
       </div>
@@ -54,9 +57,6 @@ export default {
     ChatOutgoing,
     ChatOptionList
   },
-  mounted() {
-    if (this.messages.length === 0) this.$store.dispatch('chat/sendMessage', { msg: '' });
-  },
   methods: {
     send() {
       if (!this.canSend) return;
@@ -73,6 +73,11 @@ export default {
     messages() {
       const h = this.$refs.msgHistory;
       h.scrollTop = h.scrollHeight;
+    },
+    user(data) {
+      if (data !== null && this.messages.length === 0) {
+        this.$store.dispatch('chat/sendMessage', { msg: '', context: { user: this.user.display_name } });
+      }
     }
   },
 }

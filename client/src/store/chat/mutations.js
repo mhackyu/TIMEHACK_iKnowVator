@@ -22,5 +22,8 @@ export default {
   },
   TOGGLE_ERROR(state, isError) {
     state.isError = isError;
+  },
+  CLEAR_LIST(state) {
+    state.context.actionResult = [];
   }
 }

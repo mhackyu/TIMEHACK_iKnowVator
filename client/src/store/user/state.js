@@ -1,5 +1,5 @@
 export default {
-  info: {},
+  info: null,
   isLoading: false,
   isError: false,
 };

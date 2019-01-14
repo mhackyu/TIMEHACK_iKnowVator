@@ -5,6 +5,7 @@ export default {
     try {
       commit('TOGGLE_ERROR', false);
       commit('TOGGLE_SENDING', true);
+      commit('CLEAR_LIST');
 
       // add user message
       if (data.msg != '') commit('ADD_MESSAGE', data.msg);
@@ -15,12 +16,17 @@ export default {
         text,
         context
       });
-      chat.output.text.map(text => {
+      chat.output.text.map((text, index) => {
         const msg = {
           isOwner: false,
           author: 'Sabby',
-          message: text
+          message: text,
+          list: [],
         };
+        if (index == (chat.output.text.length - 1) && Array.isArray(chat.context.actionResult)) {
+          msg.list = chat.context.actionResult;
+          msg.action = chat.context.action;
+        }
         commit('ADD_MESSAGE', msg);
       });
       commit('SET_CONTEXT', chat.context);

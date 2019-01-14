@@ -30,7 +30,7 @@ module.exports.getAllByUser = uid => {
 };
 
 module.exports.getAllByUserAndByDate = (uid, startTime, endTime) => {
-  const ACTION = '[getAll]';
+  const ACTION = '[getAllByUserAndByDate]';
   logger.info(`${TAG}${ACTION} args - ${uid}`);
   return new Promise((resolve, reject) => {
     db.execute('SELECT * FROM expense WHERE provider_id = ? AND date_created BETWEEN ? AND ?', [uid, startTime, endTime])
