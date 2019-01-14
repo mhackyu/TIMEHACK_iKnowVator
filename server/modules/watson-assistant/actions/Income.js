@@ -13,5 +13,10 @@ module.exports = {
     };
     
     return income.create(data);
-  }
+  },
+  VIEW_INCOME: (response, user) => {
+    logger.info('[ACTION_VIEW_INCOME]');
+    const { context } = response;
+    return income.getAllByUserAndByDate(user.provider_id, context.start_date, context.end_date);
+  },
 };
