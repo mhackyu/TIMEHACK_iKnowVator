@@ -65,8 +65,9 @@ img{ max-width:100%; border-radius: 50%;}
   float: left;
 }
 .mesgs {
-  padding: 30px 15px 0 25px;
+  padding: 30px 15px 15px 15px;
   width: auto;
+  background-color: #38444d;
 }
 
  .sent_msg p {
@@ -83,13 +84,13 @@ img{ max-width:100%; border-radius: 50%;}
 .sent_msg {
   border-radius: 30px;
   float: right;
-  background: #0084ff;
+  background: #1da1f2;
   color: #fff;
 }
 .input_msg_write input {
   background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
   border: medium none;
-  color: #4c4c4c;
+  color: #fff;
   font-size: 15px;
   min-height: 48px;
   width: 100%;
@@ -118,3 +119,11 @@ img{ max-width:100%; border-radius: 50%;}
   height: 516px;
   overflow-y: auto;
 } 
+
+.text-center{
+  color: #fff;
+}
+
+.loading{
+  color: #fff;
+}

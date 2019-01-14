@@ -1,15 +1,15 @@
 <template>
   <div class="container">
-    <h3 class="text-center">Sabby</h3>
     <div class="messaging">
       <div class="inbox_msg">
         <div class="mesgs">
+          <h3 class="text-center">Sabby</h3>
           <div ref="msgHistory" class="msg_history">
             <div v-for="(msg, index) in messages" :key="index">
               <chat-incoming v-if="!msg.isOwner" :author="msg.author" :msg="msg.message" />
               <chat-outgoing v-else :author="msg.author" :msg="msg.message" />
             </div>
-            <p v-show="isSending">Sab is typing...</p>
+            <p class="loading" v-show="isSending">Sab is typing...</p>
           </div>
           <div class="type_msg">
             <form class="input_msg_write" @submit.prevent="send">

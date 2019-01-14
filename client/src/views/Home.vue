@@ -1,14 +1,14 @@
 <template>
   <div>
     <Chat v-if="authToken" />
-    <Login v-else />
+    <About v-else />
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex';
 import Chat from '../components/chat/Chat.vue';
-import Login from '../components/login/Login.vue';
+import About from './About.vue'
 
 export default {
   computed: {
@@ -16,7 +16,7 @@ export default {
   },
   components: {
     Chat,
-    Login
+    About
   }
 }
 </script>

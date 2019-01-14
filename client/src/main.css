@@ -1,12 +1,16 @@
+body{
+  background-color: #10171e;
+}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
 }
 #nav {
   padding: 30px;
+  background: #1c2938;
 }
 .bd-placeholder-img {
   font-size: 1.125rem;
