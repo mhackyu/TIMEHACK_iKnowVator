@@ -6,7 +6,7 @@ const TOKEN = localStorage.getItem('token');
 const getClient = () => {
   const config = {
     baseURL: BASE_URL,
-    timeout: 3000
+    timeout: 5000
   };
 
   config.headers = {

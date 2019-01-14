@@ -29,6 +29,20 @@ module.exports.getAllByUser = uid => {
   });
 };
 
+module.exports.getAllByUserAndByDate = (uid, startTime, endTime) => {
+  const ACTION = '[getAll]';
+  logger.info(`${TAG}${ACTION} args - ${uid}`);
+  return new Promise((resolve, reject) => {
+    db.execute('SELECT * FROM expense WHERE provider_id = ? AND date_created BETWEEN ? AND ?', [uid, startTime, endTime])
+      .then(data => {
+        resolve(data);
+      })
+      .catch(err => {
+        reject(errors.raise('INTERNAL_SERVER_ERROR'));
+      });
+  });
+};
+
 module.exports.getByUserAndId = (uid, id) => {
   const ACTION = '[getByUserAndId]';
   logger.info(`${TAG}${ACTION} args - ${JSON.stringify({ uid, id })}`);
