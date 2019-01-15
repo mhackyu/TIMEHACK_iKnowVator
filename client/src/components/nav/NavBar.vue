@@ -1,17 +1,6 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #1c2938;">
-    <router-link class="navbar-brand" to="/">IKNOWVATOR</router-link>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarCollapse"
-      aria-controls="navbarCollapse"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <router-link class="navbar-brand" to="/">HACKATHON</router-link>
     <div class="collapse navbar-collapse" id="navbarCollapse">
     </div>
     <div class="mx-auto order-0">
