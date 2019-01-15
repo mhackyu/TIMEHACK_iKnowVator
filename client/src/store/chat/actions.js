@@ -1,4 +1,5 @@
 import { ChatService } from '../../services';
+import actionsUtil from '../../utils/actions';
 
 export default {
   async sendMessage({ commit }, data) {
@@ -17,21 +18,25 @@ export default {
         context
       });
       chat.output.text.map((text, index) => {
-        const msg = {
-          isOwner: false,
-          author: 'Sabby',
-          message: text,
-          list: [],
-        };
-        if (index == (chat.output.text.length - 1) && Array.isArray(chat.context.actionResult)) {
-          msg.list = chat.context.actionResult;
-          msg.action = chat.context.action;
+        let msg = {};
+        msg.isOwner = false;
+        msg.author = 'Sabby';
+        msg.message = text;
+        msg.list = [];
+        msg.action = null;
+
+        // Trigger an action for msg data manipulation
+        if (index == (chat.output.text.length - 1) && chat.context.action) {
+          if (typeof actionsUtil[chat.context.action] === 'function') {
+            msg = actionsUtil[chat.context.action](msg, chat.context);
+          }
         }
         commit('ADD_MESSAGE', msg);
       });
       commit('SET_CONTEXT', chat.context);
       commit('SET_GENERIC', chat.output.generic);
     } catch (error) {
+      console.log('ERROR', error);
       commit('TOGGLE_ERROR', true);
     }
     commit('TOGGLE_SENDING', false);
