@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #1c2938;">
-    <router-link class="navbar-brand" to="/">HACKATHON</router-link>
+    <router-link class="navbar-brand" to="/">iKnowVator</router-link>
     <div class="collapse navbar-collapse" id="navbarCollapse">
     </div>
     <div class="mx-auto order-0">

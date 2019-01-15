@@ -1,7 +1,9 @@
 <template>
-  <div>
-    <ul class="list" v-for="(item, index) in items" :key="index">
-      <li class="list-item"> {{ index + 1 }}. {{ item.description }} on {{ formatDate(item.date_created) }}.</li>
+  <div class="list">
+    <ul >
+      <li v-for="(item, index) in items" :key="index" class="list-item"> 
+        {{ index + 1 }}. {{ item.description }} on {{ formatDate(item.date_created) }}.
+      </li>
     </ul>
   </div>
 </template>

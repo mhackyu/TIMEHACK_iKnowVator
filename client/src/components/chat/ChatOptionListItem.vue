@@ -28,10 +28,17 @@ export default {
 
 <style scoped>
 .btn-default {
-  margin: 2px;
+  /* margin: 2px;
+  margin-bottom: 8px; */
+  margin: 6px 2px;
   border-radius: 30px;
-  background: #0084ff;
+  /* background: #0084ff; */
+  /* background-color: #38444d; */
+  /* background-color: rgb(28, 41, 56); */
+  /* background-color: #ff00b1; */
+  background-color: #465663;
   color: #fff;
+  /* border: 1px solid #44e8d3; */
 }
 .btn-default:hover{
   background-color: white;
