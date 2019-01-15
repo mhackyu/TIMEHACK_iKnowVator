@@ -1,5 +1,7 @@
 body{
-  background-color: #10171e;
+  background-color: #44e8d3;
+  background-image: url("https://media.giphy.com/media/bJnqyzhYlF8LS/giphy.gif");
+  background-size: 90px;
 }
 
 #app {
