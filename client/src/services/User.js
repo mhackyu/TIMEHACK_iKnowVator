@@ -6,4 +6,8 @@ export default class User {
   getUserInfo() {
     return this.http.get('/users/me');
   }
+
+  logout() {
+    return this.http.post('/users/logout');
+  }
 }

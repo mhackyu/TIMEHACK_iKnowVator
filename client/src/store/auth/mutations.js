@@ -6,5 +6,8 @@ export default {
   CLEAR_AUTH_TOKEN(state) {
     localStorage.removeItem('token');
     state.authToken = null;
+  },
+  TOGGLE_LOGGING_OUT(state, isLoggingOut) {
+    state.isLoggingOut = isLoggingOut;
   }
 };

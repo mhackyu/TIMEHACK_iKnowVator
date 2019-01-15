@@ -47,14 +47,4 @@ router.get(
   }
 );
 
-router.get('/logout', function(req, res) {
-  const ACTION = '[GET_LOGOUT]';
-  logger.info(`${TAG}${ACTION}`);
-
-  // Blacklist jwt on logout.
-
-  req.logout();
-  res.redirect('/');
-});
-
 module.exports = router;

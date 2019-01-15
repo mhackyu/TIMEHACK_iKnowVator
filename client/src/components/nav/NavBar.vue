@@ -20,7 +20,8 @@
           <div id="customBtn" class="customGPlusSignIn">
             <a @click="logout">
             <img :src="user.avatar" v-if="user" height="40px"/>
-            <span class="buttonText">Sign out</span>
+            <span class="buttonText" v-if="!isLoggingOut">Sign out</span>
+            <span class="buttonText" v-if="isLoggingOut">Logging out</span>
             </a>
           </div>
         </li>
@@ -43,7 +44,7 @@ import { mapState, mapActions } from 'vuex';
 
 export default {
   computed: {
-    ...mapState('auth', ['authToken']),
+    ...mapState('auth', ['authToken', 'isLoggingOut']),
     ...mapState('user', { user: 'info'}),
   },
   methods: {
@@ -51,8 +52,7 @@ export default {
       getUserInfo: 'user/getUserInfo'
     }),
     logout() {
-      this.$store.dispatch('auth/clearAuthToken');
-      this.$store.dispatch('user/clearInfo');
+      this.$store.dispatch('auth/logout');
     },
   },
   mounted() {
