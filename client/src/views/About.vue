@@ -48,7 +48,7 @@
         </h3>
       </div>
       <div class="col-lg-3 col-sm-6 text-center mb-4">
-        <img class="rounded-circle img-fluid d-block mx-auto" src="https://scontent-hkg3-1.xx.fbcdn.net/v/t1.0-9/39389274_10210040331484777_8839902564800528384_n.jpg?_nc_cat=110&_nc_ht=scontent-hkg3-1.xx&oh=c66cfd301a02e370032397323a7cc60b&oe=5CC9B87C" width="200" height="200" alt="Julie">
+        <img class="rounded-circle img-fluid d-block mx-auto" src="https://scontent-hkg3-1.xx.fbcdn.net/v/t1.0-9/50253075_10210993529074121_2950811719703724032_n.jpg?_nc_cat=110&_nc_ht=scontent-hkg3-1.xx&oh=f7fa2127bd12f35896deffc5aae318e7&oe=5CD0F2A7" width="200" height="200" alt="Julie">
         <h3>Julienne Santos
         </h3>
       </div>

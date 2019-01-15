@@ -1,9 +1,8 @@
 <template>
   <div class="incoming_msg">
     <div class="incoming_msg_img">
-      <img src="https://emoji.slack-edge.com/T91BPUL04/jodie_smiley_max/6f1c71bdf2523319.jpg" width="28" height="28">
-    </div>
-    <div class="received_msg">
+      <img class="avatar" src="../img/avatar.png" style="height: 32px; width: 32px;">
+      <div class="received_msg">
       <div class="received_withd_msg">
         <p>{{ msg.message }}</p>
         <div v-if="msg.list.length > 0">
@@ -11,6 +10,8 @@
         </div>
       </div>
     </div>
+    </div>
+    
   </div>
 </template>
 
