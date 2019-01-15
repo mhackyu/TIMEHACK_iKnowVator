@@ -16,10 +16,11 @@
               <input
                 type="text"
                 class="write_msg"
+                autofocus
                 placeholder="Type your message..."
                 v-model="message"
               >
-              <button class="msg_send_btn" type="submit">Send</button>
+              <button class="material-icons" type="submit">send</button>
             </form>
             <p v-show="isError">Something went wrong. Please try again.</p>
             <chat-option-list v-if="!isSending" :options="options"/>
