@@ -1,5 +1,5 @@
 <template>
-  <button class="btn btn-link btn-block" role="presentation" @click="send(option)">{{ option.label }}</button>
+  <button class="btn btn-default btn-block" role="presentation" @click="send(option)">{{ option.label }}</button>
 </template>
 
 <script>
@@ -27,10 +27,15 @@ export default {
 </script>
 
 <style scoped>
-.btn-link {
+.btn-default {
   margin: 2px;
   border-radius: 30px;
   background: #0084ff;
   color: #fff;
 }
+.btn-default:hover{
+  background-color: white;
+  color: #008CBA 
+}
+
 </style>

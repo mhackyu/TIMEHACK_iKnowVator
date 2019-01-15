@@ -10,6 +10,7 @@ img{ max-width:100%; border-radius: 50%;}
   border: 1px solid #c4c4c4;
   clear: both;
   overflow: hidden;
+  margin-top: 20px;
 }
 .top_spac{ margin: 20px 0 0;}
 
@@ -68,6 +69,7 @@ img{ max-width:100%; border-radius: 50%;}
   padding: 30px 15px 15px 15px;
   width: auto;
   background-color: #38444d;
+  
 }
 
  .sent_msg p {
@@ -97,12 +99,12 @@ img{ max-width:100%; border-radius: 50%;}
 }
 
 .type_msg {border-top: 1px solid #c4c4c4;position: relative;}
-.msg_send_btn {
+.material-icons {
   background: #365899 none repeat scroll 0 0;
   border: medium none;
   color: #fff;
   cursor: pointer;
-  font-size: 17px;
+  font-size: 30px;
   height: 33px;
   position: absolute;
   right: 0;
@@ -114,6 +116,12 @@ img{ max-width:100%; border-radius: 50%;}
   min-width: 33px;
   border-radius: 30px;
 }
+
+.material-icons:hover{
+  background-color: white;
+  color: #008CBA;
+}
+
 .messaging { padding: 0 0 50px 0;}
 .msg_history {
   height: 516px;
