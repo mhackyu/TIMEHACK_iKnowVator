@@ -18,5 +18,9 @@ module.exports = {
     const { context } = response;
     return expense.getAllByUserAndByDate(user.provider_id, context.start_date, context.end_date);
   },
-
+  REPORT_EXPENSE: (response, user) => {
+    logger.info('[ACTION_REPORT_EXPENSE]');
+    const { context } = response;
+    return expense.getAllByUserAndByDate(user.provider_id, context.start_date, context.end_date);
+  }
 };
