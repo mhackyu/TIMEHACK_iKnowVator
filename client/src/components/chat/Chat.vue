@@ -1,39 +1,35 @@
 <template>
-  <div class="container">
-    <div class="messaging">
-      <div class="inbox_msg">
-        <div class="mesgs">
-          <h3 class="text-center bot-heading">Sabrina</h3>
-          <div ref="msgHistory" class="msg_history">
-            <div v-for="(msg, index) in messages" :key="index">
-              <chat-incoming v-if="!msg.isOwner" :msg="msg" />
-              <chat-outgoing v-else :msg="msg"/>
+  <div class="container-fluid">
+    <div class="mesgs">
+      <h3 class="text-center bot-heading">Sabrina</h3>
+      <div ref="msgHistory" class="msg_history">
+        <div v-for="(msg, index) in messages" :key="index">
+          <chat-incoming v-if="!msg.isOwner" :msg="msg" />
+          <chat-outgoing v-else :msg="msg"/>
+        </div>
+        <div class="incoming_msg" v-show="isSending">
+          <div class="incoming_msg_img">
+            <img class="avatar" src="../img/avatar.png" style="height: 32px; width: 32px;">
+            <div class="received_msg">
+              <img class="typing" src="https://media.giphy.com/media/dYsB5F09z0fYvQLm9K/giphy.gif" />
+              <p class="loading">Sab is typing...</p>
             </div>
-            <div class="incoming_msg" v-show="isSending">
-              <div class="incoming_msg_img">
-                <img class="avatar" src="../img/avatar.png" style="height: 32px; width: 32px;">
-                <div class="received_msg">
-                  <img class="typing" src="https://raw.githubusercontent.com/lhl/pusheen-stickers/master/gif/pusheen/144884865685780.gif" />
-                  <p class="loading">Sab is typing...</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="type_msg">
-            <form class="input_msg_write" @submit.prevent="send">
-              <input
-                type="text"
-                class="write_msg"
-                autofocus
-                placeholder="Type your message..."
-                v-model="message"
-              >
-              <button class="material-icons" type="submit">send</button>
-            </form>
-            <p v-show="isError">Something went wrong. Please try again.</p>
-            <chat-option-list v-if="!isSending" :options="options"/>
           </div>
         </div>
+      </div>
+      <div class="type_msg">
+        <form class="input_msg_write" @submit.prevent="send">
+          <input
+            type="text"
+            class="write_msg"
+            autofocus
+            placeholder="Type your message..."
+            v-model="message"
+          >
+          <button class="material-icons" type="submit">send</button>
+        </form>
+        <p v-show="isError">Something went wrong. Please try again.</p>
+        <chat-option-list v-if="!isSending" :options="options"/>
       </div>
     </div>
   </div>
