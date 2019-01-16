@@ -9,7 +9,7 @@
         </div>
         <div class="incoming_msg" v-show="isSending">
           <div class="incoming_msg_img">
-            <img class="avatar" src="../img/avatar.png" style="height: 32px; width: 32px;">
+            <img class="avatar" src="../../assets/avatar.png" style="height: 32px; width: 32px;">
             <div class="received_msg">
               <img class="typing" src="https://media.giphy.com/media/dYsB5F09z0fYvQLm9K/giphy.gif" />
               <p class="loading">Sab is typing...</p>
