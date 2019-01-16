@@ -1,17 +1,16 @@
-.container{max-width:1170px; margin:auto;}
+.container-fluid{
+  max-width: 1170px; 
+  margin: auto;
+  border-radius: 1%;
+  clear: both;
+  overflow: hidden;
+}
 .avatar{ max-width:100%; border-radius: 50%;}
 .inbox_people {
   background: #f8f8f8 none repeat scroll 0 0;
   float: left;
   overflow: hidden;
   width: 40%; border-right:1px solid #c4c4c4;
-}
-.inbox_msg {
-  border-radius: 1%;
-  clear: both;
-  overflow: hidden;
-  margin-top: 22px;
-  box-shadow: 12px 12px rgba(0, 0, 0, 0.3);
 }
 .top_spac{ margin: 20px 0 0;}
 
@@ -84,7 +83,9 @@
   padding: 30px 15px 15px 15px;
   width: auto;
   background-color: #38444d;
-  
+  border-radius: 15px;
+  margin-top: 25px;
+  margin-bottom: 120px;
 }
 
  .sent_msg p {

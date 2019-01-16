@@ -1,13 +1,22 @@
 body{
   background-color: #44e8d3;
+}
+
+.panda{
   background-image: url("https://media.giphy.com/media/bJnqyzhYlF8LS/giphy.gif");
-  background-size: 90px;
+  background-size: 80px;
+}
+
+.no-panda{
+  background-image: url("https://media.giphy.com/media/5hs6qq07zgzQKZfEa3/giphy.gif");
+  background-size: 80px;
 }
 
 #app {
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: -webkit-fill-available;
 }
 #nav {
   padding: 30px;
@@ -28,8 +37,14 @@ main > .container {
   padding: 60px 15px 0;
 }
 
-.footer {
-  background-color: #f5f5f5;
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: 60px;
+  background: #222;
+  color: white;
 }
 
 .footer > .container {
