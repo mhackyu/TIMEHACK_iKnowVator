@@ -105,7 +105,4 @@ pre{
   font-size: 100%;
 }
 
-.row{
-}
-
 </style>
