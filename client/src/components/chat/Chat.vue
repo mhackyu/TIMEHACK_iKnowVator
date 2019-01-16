@@ -3,13 +3,21 @@
     <div class="messaging">
       <div class="inbox_msg">
         <div class="mesgs">
-          <h3 class="text-center">Sabby</h3>
+          <h3 class="text-center bot-heading">Sabrina</h3>
           <div ref="msgHistory" class="msg_history">
             <div v-for="(msg, index) in messages" :key="index">
               <chat-incoming v-if="!msg.isOwner" :msg="msg" />
               <chat-outgoing v-else :msg="msg"/>
             </div>
-            <p class="loading" v-show="isSending">Sab is typing...</p>
+            <div class="incoming_msg" v-show="isSending">
+              <div class="incoming_msg_img">
+                <img class="avatar" src="../img/avatar.png" style="height: 32px; width: 32px;">
+                <div class="received_msg">
+                  <img class="typing" src="https://raw.githubusercontent.com/lhl/pusheen-stickers/master/gif/pusheen/144884865685780.gif" />
+                  <p class="loading">Sab is typing...</p>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="type_msg">
             <form class="input_msg_write" @submit.prevent="send">

@@ -7,10 +7,11 @@
   width: 40%; border-right:1px solid #c4c4c4;
 }
 .inbox_msg {
-  border: 1px solid #c4c4c4;
+  border-radius: 1%;
   clear: both;
   overflow: hidden;
-  margin-top: 20px;
+  margin-top: 22px;
+  box-shadow: 12px 12px rgba(0, 0, 0, 0.3);
 }
 .top_spac{ margin: 20px 0 0;}
 
@@ -47,6 +48,7 @@
   padding: 0 0 0 10px;
   vertical-align: top;
   width: auto;
+  margin-bottom: 8px;
  }
  .received_withd_msg p {
   color: rgba(0, 0, 0, 1);
@@ -56,6 +58,14 @@
   width: 100%;
   font-family: Helvetica, Arial, sans-serif;
 }
+.has-list {
+  padding-top: 16px;
+}
+
+.has-list p {
+  font-weight: 700;
+}
+
 .time_date {
   color: #747474;
   display: block;
@@ -90,7 +100,7 @@
 .sent_msg {
   border-radius: 30px;
   float: right;
-  background: #1da1f2;
+  background: #ea5bbe;
   width: auto;
   color: #fff;
   position: relative;
@@ -104,19 +114,26 @@
   width: 100%;
 }
 
-.type_msg {border-top: 1px solid #c4c4c4;position: relative;}
+.type_msg {
+  position: relative;
+}
+.type_msg input {
+  outline: none;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+  margin-bottom: 12px;
+}
 .material-icons {
-  background: #365899 none repeat scroll 0 0;
+  background: #ea5bbe none repeat scroll 0 0;
   border: medium none;
   color: #fff;
   cursor: pointer;
-  font-size: 30px;
+  font-size: 18px;
   height: 33px;
   position: absolute;
   right: 0;
-  top: 11px;
+  top: 8px;
   width: 66px;
-  font-weight: bold;
   line-height: 32px;
   max-width: 80px;
   min-width: 33px;
@@ -132,6 +149,7 @@
 .msg_history {
   height: 516px;
   overflow-y: auto;
+  padding-bottom: 20px;
 } 
 
 .text-center{
@@ -140,4 +158,14 @@
 
 .loading{
   color: #fff;
+}
+
+.bot-heading {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.typing {
+  /* margin-top: 20px; */
+  height: 42px;
 }

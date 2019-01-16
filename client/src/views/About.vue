@@ -1,6 +1,6 @@
 <template>
   <!-- Page Content -->
-  <div class="container">
+  <div class="container-fluid">
 
     <!-- Introduction Row -->
     <h1 class="my-4">About Us
@@ -69,15 +69,16 @@
 </template>
 
 <style scoped>
-  pre{
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    color: #fff;
-    font-size: 100%;
-  }
-  .container{
-    text-align: left;
-    color: #fff;
-  }
+pre{
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  color: #fff;
+  font-size: 100%;
+}
+.container-fluid{
+  text-align: left;
+  color: #fff;
+  background-color: #000;
+}
 
 @media (min-width: 992px) {
   body {
