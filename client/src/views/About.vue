@@ -4,8 +4,9 @@
     <div class="about">
       <div class="about-text">
         <!-- Introduction Row -->
-        <h1 class="my-4">About Us
+        <h1 class="my-4">About This App
         </h1>
+            <iframe width="0" height="0" src="https://www.youtube.com/embed/QH2-TGUlwu4?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <pre>
           Have you made a New Year's Resolution to be smarter with your money this 2019?
           Have you ever tried money tracking apps?
@@ -21,10 +22,10 @@
           Our proposal is the iKnowVator FinanceBot, where your assistant, Sabrina, will help you keep track of your finances anywhere, anytime.
 
           Tell her:
-          what you ate
-          where you ate
-          what you bought
-          where you went
+          what you ate <img src="https://thumbs.gfycat.com/SharpWellgroomedEastrussiancoursinghounds-size_restricted.gif" height="40">
+          where you ate <img src="https://www.twomato.com/assets/images/loader.gif" height="40">
+          what you bought <img src="https://thumbs.gfycat.com/ImportantImpeccableBuck-max-1mb.gif" height="40">
+          where you went <img src="https://i.pinimg.com/originals/2b/38/53/2b3853e6ad590e8249f1d64ef85b9dc5.gif" height="40">
 
           plus how much you spent, and she'll keep track of all your expenses, even incomes!
 
