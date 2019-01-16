@@ -2,7 +2,7 @@
   <div class="list">
     <ul >
       <li v-for="(item, index) in items" :key="index" class="list-item"> 
-        {{ index + 1 }}. {{ item.description }} on {{ formatDate(item.date_created) }}.
+        {{ item.description }} on {{ formatDate(item.date_created) }}.
       </li>
     </ul>
   </div>
