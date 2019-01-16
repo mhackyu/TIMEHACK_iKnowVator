@@ -22,5 +22,10 @@ export default {
 </script>
 
 <style scoped>
+.option {
+  margin-top: 6px;
+  /* border: 1px solid #fff; */
+  /* background-color: rgb(28, 41, 56); */
+}
 </style>
 
