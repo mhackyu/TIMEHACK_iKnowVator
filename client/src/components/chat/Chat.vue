@@ -30,7 +30,7 @@
           >
           <button class="material-icons" type="submit">send</button>
         </form>
-        <p class="error_sending" v-show="isError">Something went wrong. Please relaod the page.</p>
+        <p class="error_sending" v-show="isError">Something went wrong. Please reload the page.</p>
         <chat-option-list v-if="!isSending" :options="options"/>
       </div>
     </div>
