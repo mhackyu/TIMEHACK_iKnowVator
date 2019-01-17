@@ -6,6 +6,14 @@
   overflow: hidden;
 }
 
+.container-corgi{
+  max-width: 1170px; 
+  margin: auto;
+  border-radius: 1%;
+  clear: both;
+  overflow: hidden; 
+}
+
 .avatar{ max-width:100%; border-radius: 50%;}
 
 .incoming_msg_img {

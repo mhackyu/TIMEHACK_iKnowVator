@@ -1,3 +1,4 @@
+
 body{
   background-color: #44e8d3;
 }
@@ -11,6 +12,29 @@ body{
   background-image: url("https://thumbs.gfycat.com/RadiantJoyousGrayling-max-1mb.gif");
   background-size: 150px;
 }
+
+#overlay{
+  width:200px;
+  position:absolute; /*You may also use fixed depending on your needs.*/
+  left:40;
+  top:40; /*If you want it at the bottom you probably want bottom:0 instead*/
+  animation: mymove 30s infinite;
+  }
+
+  @keyframes mymove {
+    0% {left: 0%;z-index: 999;}
+    50% {left: calc(100% - 200px);
+      transform: scaleX(1);
+    z-index: 999;}
+    51%{ z-index: 1;}
+    60% {transform: scaleX(-1);}
+    90%{transform: scaleX(-1);z-index: 1;}
+    100% {
+      transform: scaleX(1);
+      left: 0%;
+      z-index: 999;
+    }
+  }
 
 #app {
   font-family: 'Poppins', sans-serif;

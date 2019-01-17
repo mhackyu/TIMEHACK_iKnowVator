@@ -1,12 +1,16 @@
 <template>
   <!-- Page Content -->
   <div class="container-fluid">
+        <img src="https://corgiorgy.com/corgiswimflip.gif" id="overlay">
     <div class="about">
       <div class="about-text">
         <!-- Introduction Row -->
-        <h1 class="my-4">About This App
-        </h1>
+        <div class="center">
+          <h1> <img src="https://image.tutpad.com/tut/0/0/53/11_MONEDA.gif" width="200px">About This App<img src="https://image.tutpad.com/tut/0/0/53/11_MONEDA.gif" width="200px"></h1>
+        </div>
+
             <iframe width="0" height="0" src="https://www.youtube.com/embed/QH2-TGUlwu4?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
         <pre>
           Have you made a New Year's Resolution to be smarter with your money this 2019?
           Have you ever tried money tracking apps?
@@ -77,7 +81,13 @@
   border-radius: 1%;
   clear: both;
   overflow: hidden;
+ 
+ 
   
+}
+.center{
+  display: flex;
+  justify-content: center;
 }
 
 .about {
@@ -87,6 +97,8 @@
   border-radius: 15px;
   margin-top: 25px;
   margin-bottom: 25px;
+   position: relative;
+   z-index: 2;
 }
 
 
