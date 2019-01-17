@@ -25,7 +25,7 @@
   padding: 0 0 0 10px;
   vertical-align: top;
   width: auto;
-  margin-bottom: 8px;
+  margin-bottom: 3px;
  }
  .received_withd_msg {
   border-radius: 30px;
@@ -76,14 +76,21 @@
   border-radius: 15px;
   margin-top: 25px;
   margin-bottom: 120px;
+  transition: all .5s;
 }
 
 .incoming_msg{ overflow:hidden; margin:2px;}
 .outgoing_msg{ overflow:hidden; margin:2px;}
 
-
-.input_msg_write{
-  z-index: 1;
+.sent_msg {
+  border-radius: 30px;
+  float: right;
+  background: #ea5bbe;
+  width: auto;
+  color: #fff;
+  position: relative;
+  margin-bottom: 3px;
+  margin-right: 12px;
 }
 
 .input_msg_write input {
@@ -148,4 +155,24 @@
 .typing {
   margin-top: -28px;
   height: 90px;
+}
+
+.error_sending {
+  color: #44e8d3;
+  animation: pulse 3s infinite;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+@keyframes pulse {
+  0% {
+    color: #ffffff;
+  }
+  50% {
+    color: #ff3043;
+  }
+  100% {
+    color: #ffffff;
+  }
 }

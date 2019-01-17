@@ -3,15 +3,19 @@
     <div class="mesgs">
       <h3 class="text-center bot-heading">Sabrina</h3>
       <div ref="msgHistory" class="msg_history">
-        <div v-for="(msg, index) in messages" :key="index">
-          <chat-incoming v-if="!msg.isOwner" :msg="msg" />
-          <chat-outgoing v-else :msg="msg"/>
-        </div>
+        <transition-group enter-active-class="animated fadeIn">
+          <div v-for="(msg, index) in messages" :key="index + 0">
+            <chat-incoming v-if="!msg.isOwner" :msg="msg"/>
+            <chat-outgoing v-else :msg="msg"/>
+          </div>
+        </transition-group>
         <div class="incoming_msg" v-show="isSending">
-          <img class="avatar" src="../../assets/avatar.png" style="height: 32px; width: 32px;">
-          <div class="received_msg">
-            <img class="typing" src="https://media.giphy.com/media/dYsB5F09z0fYvQLm9K/giphy.gif" />
-            <p class="loading">Sab is typing...</p>
+          <div class="incoming_msg_img">
+            <img class="avatar" src="../../assets/avatar.png" style="height: 32px; width: 32px;">
+            <div class="received_msg">
+              <img class="typing" src="https://media.giphy.com/media/dYsB5F09z0fYvQLm9K/giphy.gif">
+              <p class="loading">Sab is typing...</p>
+            </div>
           </div>
         </div>
       </div>
@@ -26,7 +30,7 @@
           >
           <button class="material-icons" type="submit">send</button>
         </form>
-        <p v-show="isError">Something went wrong. Please try again.</p>
+        <p class="error_sending" v-show="isError">Something went wrong. Please relaod the page.</p>
         <chat-option-list v-if="!isSending" :options="options"/>
       </div>
     </div>
@@ -52,7 +56,7 @@ export default {
       options: 'chat/getOptions'
     }),
     canSend() {
-      return this.message != '' ? true : false;
+      return this.message != '' && !this.isSending ? true : false;
     }
   },
   components: {
@@ -73,15 +77,15 @@ export default {
     }
   },
   watch: {
-    messages() {
-      const h = this.$refs.msgHistory;
-      h.scrollTop = h.scrollHeight;
-    },
     user(data) {
       if (data !== null && this.messages.length === 0) {
         this.$store.dispatch('chat/sendMessage', { msg: '', context: { user: this.user.display_name } });
       }
     }
+  },
+  updated() {
+    const h = this.$refs.msgHistory;
+    h.scrollTop = h.scrollHeight;
   },
 }
 </script>

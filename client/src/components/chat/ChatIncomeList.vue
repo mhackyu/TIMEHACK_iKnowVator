@@ -2,7 +2,7 @@
   <div class="list">
     <ul >
       <li v-for="(item, index) in items" :key="index" class="list-item"> 
-        {{ item.description }} on {{ formatDate(item.date_created) }}.
+        You've earned {{ formatCurrency(item.amount) }} on {{ formatDate(item.date_created) }}.
       </li>
     </ul>
   </div>
@@ -18,6 +18,9 @@ export default {
   methods: {
     formatDate(data) {
       return format.toDate(data);
+    },
+    formatCurrency(data) {
+      return format.toCurreny(data);
     }
   },
 }
@@ -30,5 +33,6 @@ export default {
 .list-item {
   margin: 0;
   padding: 0;
+  margin-right: 12px;
 }
 </style>
