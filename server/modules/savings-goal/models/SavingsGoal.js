@@ -15,11 +15,20 @@ module.exports.create = data => {
   });
 };
 
-module.exports.getAllByUser = uid => {
-  const ACTION = '[getAll]';
-  logger.info(`${TAG}${ACTION} args - ${uid}`);
+module.exports.getByStartDateAndEndDate = (uid, startTime, endTime) => {
+  const ACTION = '[getByStartDateAndEndDate]';
+  logger.info(`${TAG}${ACTION} args - ${JSON.stringify({uid, startTime, endTime})}`);
   return new Promise((resolve, reject) => {
-    db.execute('SELECT * FROM savings_goals WHERE provider_id = ?', uid)
+    db.execute(
+      `
+      SELECT id, current_amount, goal_amount, date_start, date_end, date_modified
+      FROM savings_goals 
+      WHERE provider_id = ? 
+      AND date_start >= ? 
+      AND date_end <= ?
+    `,
+      [uid, startTime, endTime]
+    )
       .then(data => {
         resolve(data);
       })
@@ -29,23 +38,8 @@ module.exports.getAllByUser = uid => {
   });
 };
 
-module.exports.getByUserAndId = (uid, id) => {
-  const ACTION = '[getByUserAndId]';
-  logger.info(`${TAG}${ACTION} args - ${JSON.stringify({ uid, id })}`);
-  return new Promise((resolve, reject) => {
-    db.execute('SELECT * FROM savings_goals WHERE provider_id = ? AND id = ?', [uid, id])
-      .then(data => {
-        if (data.length > 0) resolve(data[0]);
-        else reject(errors.raise('NOT_FOUND'));
-      })
-      .catch(err => {
-        reject(errors.raise('INTERNAL_SERVER_ERROR'));
-      });
-  });
-};
-
-module.exports.updateByUserAndId = (uid, id, data) => {
-  const ACTION = '[updateByUserAndId]';
+module.exports.update = (uid, id, data) => {
+  const ACTION = '[update]';
   logger.info(`${TAG}${ACTION} args - ${JSON.stringify({ uid, id, data })}`);
   return new Promise((resolve, reject) => {
     db.execute('UPDATE savings_goals SET ? WHERE provider_id = ? AND id = ?', [data, uid, id])
@@ -63,16 +57,64 @@ module.exports.updateByUserAndId = (uid, id, data) => {
   });
 };
 
-module.exports.deleteByUserAndId = (uid, id) => {
-  const ACTION = '[deleteByUserAndId]';
-  logger.info(`${TAG}${ACTION} args - ${JSON.stringify({ uid, id })}`);
-  return new Promise((resolve, reject) => {
-    db.execute('DELETE FROM savings_goals WHERE provider_id = ? AND id = ?', [uid, id])
-      .then(data => {
-        resolve(data);
-      })
-      .catch(err => {
-        reject(errors.raise('INTERNAL_SERVER_ERROR'));
-      });
-  });
-};
+// module.exports.getAllByUser = uid => {
+//   const ACTION = '[getAll]';
+//   logger.info(`${TAG}${ACTION} args - ${uid}`);
+//   return new Promise((resolve, reject) => {
+//     db.execute('SELECT * FROM savings_goals WHERE provider_id = ?', uid)
+//       .then(data => {
+//         resolve(data);
+//       })
+//       .catch(err => {
+//         reject(errors.raise('INTERNAL_SERVER_ERROR'));
+//       });
+//   });
+// };
+
+// module.exports.getByUserAndId = (uid, id) => {
+//   const ACTION = '[getByUserAndId]';
+//   logger.info(`${TAG}${ACTION} args - ${JSON.stringify({ uid, id })}`);
+//   return new Promise((resolve, reject) => {
+//     db.execute('SELECT * FROM savings_goals WHERE provider_id = ? AND id = ?', [uid, id])
+//       .then(data => {
+//         if (data.length > 0) resolve(data[0]);
+//         else reject(errors.raise('NOT_FOUND'));
+//       })
+//       .catch(err => {
+//         reject(errors.raise('INTERNAL_SERVER_ERROR'));
+//       });
+//   });
+// };
+
+// module.exports.updateByUserAndId = (uid, id, data) => {
+//   const ACTION = '[updateByUserAndId]';
+//   logger.info(`${TAG}${ACTION} args - ${JSON.stringify({ uid, id, data })}`);
+//   return new Promise((resolve, reject) => {
+//     db.execute('UPDATE savings_goals SET ? WHERE provider_id = ? AND id = ?', [data, uid, id])
+//       .then(data => {
+//         if (data.affectedRows > 0) {
+//           resolve({
+//             status: 200,
+//             msg: 'Successfully updated.'
+//           });
+//         }
+//       })
+//       .catch(err => {
+//         reject(errors.raise('INTERNAL_SERVER_ERROR'));
+//       });
+//   });
+// };
+
+// module.exports.deleteByUserAndId = (uid, id) => {
+//   const ACTION = '[deleteByUserAndId]';
+//   logger.info(`${TAG}${ACTION} args - ${JSON.stringify({ uid, id })}`);
+//   return new Promise((resolve, reject) => {
+//     db.execute('DELETE FROM savings_goals WHERE provider_id = ? AND id = ?', [uid, id])
+//       .then(data => {
+//         resolve(data);
+//       })
+//       .catch(err => {
+//         reject(errors.raise('INTERNAL_SERVER_ERROR'));
+//       });
+//   });
+// };

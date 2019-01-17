@@ -5,7 +5,8 @@ module.exports.create = data => {
   const ACTION = '[create]';
   logger.info(`${TAG}${ACTION} args - ${JSON.stringify(data)}`);
   return new Promise((resolve, reject) => {
-    db.execute('INSERT INTO expense SET ?', data)
+    data.type = 'EXPENSE';
+    db.execute('INSERT INTO transactions SET ?', data)
       .then(data => {
         resolve(data);
       })
@@ -31,9 +32,17 @@ module.exports.getAllByUser = uid => {
 
 module.exports.getAllByUserAndByDate = (uid, startTime, endTime) => {
   const ACTION = '[getAllByUserAndByDate]';
-  logger.info(`${TAG}${ACTION} args - ${uid}`);
+  logger.info(`${TAG}${ACTION} args - ${JSON.stringify({ uid, startTime, endTime })}`);
   return new Promise((resolve, reject) => {
-    db.execute('SELECT * FROM expense WHERE provider_id = ? AND date_created BETWEEN ? AND ?', [uid, startTime, endTime])
+    db.execute(`
+        SELECT id, description, amount, category, date_created
+        FROM transactions 
+        WHERE provider_id = ? 
+        AND date_created BETWEEN ? AND ? 
+        AND type = 'EXPENSE'
+      `,
+      [uid, startTime, endTime]
+    )
       .then(data => {
         resolve(data);
       })
@@ -47,7 +56,10 @@ module.exports.getByUserAndId = (uid, id) => {
   const ACTION = '[getByUserAndId]';
   logger.info(`${TAG}${ACTION} args - ${JSON.stringify({ uid, id })}`);
   return new Promise((resolve, reject) => {
-    db.execute('SELECT * FROM expense WHERE provider_id = ? AND id = ?', [uid, id])
+    db.execute('SELECT * FROM expense WHERE provider_id = ? AND id = ?', [
+      uid,
+      id
+    ])
       .then(data => {
         if (data.length > 0) resolve(data[0]);
         else reject(errors.raise('NOT_FOUND'));
@@ -62,7 +74,11 @@ module.exports.updateByUserAndId = (uid, id, data) => {
   const ACTION = '[updateByUserAndId]';
   logger.info(`${TAG}${ACTION} args - ${JSON.stringify({ uid, id, data })}`);
   return new Promise((resolve, reject) => {
-    db.execute('UPDATE expense SET ? WHERE provider_id = ? AND id = ?', [data, uid, id])
+    db.execute('UPDATE expense SET ? WHERE provider_id = ? AND id = ?', [
+      data,
+      uid,
+      id
+    ])
       .then(data => {
         if (data.affectedRows > 0) {
           resolve({
@@ -81,7 +97,10 @@ module.exports.deleteByUserAndId = (uid, id) => {
   const ACTION = '[deleteByUserAndId]';
   logger.info(`${TAG}${ACTION} args - ${JSON.stringify({ uid, id })}`);
   return new Promise((resolve, reject) => {
-    db.execute('DELETE FROM expense WHERE provider_id = ? AND id = ?', [uid, id])
+    db.execute('DELETE FROM expense WHERE provider_id = ? AND id = ?', [
+      uid,
+      id
+    ])
       .then(data => {
         resolve(data);
       })

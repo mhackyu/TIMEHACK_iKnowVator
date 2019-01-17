@@ -5,6 +5,9 @@ export default {
   CLEAR_MESSAGES(state) {
     state.messages = [];
   },
+  REMOVE_LAST_MESSAGE(state) {
+    state.messages.pop();
+  },
   SET_CONTEXT(state, context) {
     state.context = context;
   },

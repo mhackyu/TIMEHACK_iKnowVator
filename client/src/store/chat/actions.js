@@ -28,6 +28,7 @@ export default {
         // Trigger an action for msg data manipulation
         if (index == (chat.output.text.length - 1) && chat.context.action) {
           if (typeof actionsUtil[chat.context.action] === 'function') {
+            // if (chat.context.action.includes('VIEW')) commit('REMOVE_LAST_MESSAGE');
             msg = actionsUtil[chat.context.action](msg, chat.context);
           }
         }
