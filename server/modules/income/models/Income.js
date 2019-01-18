@@ -5,7 +5,8 @@ module.exports.create = data => {
   const ACTION = '[create]';
   logger.info(`${TAG}${ACTION} args - ${JSON.stringify(data)}`);
   return new Promise((resolve, reject) => {
-    db.execute('INSERT INTO income SET ?', data)
+    data.type = 'INCOME';
+    db.execute('INSERT INTO transactions SET ?', data)
       .then(data => {
         resolve(data);
       })
@@ -33,7 +34,13 @@ module.exports.getAllByUserAndByDate = (uid, startTime, endTime) => {
   const ACTION = '[getAllByUserAndByDate]';
   logger.info(`${TAG}${ACTION} args - ${uid}`);
   return new Promise((resolve, reject) => {
-    db.execute('SELECT * FROM income WHERE provider_id = ? AND date_created BETWEEN ? AND ?', [uid, startTime, endTime])
+    db.execute(`
+      SELECT id, description, amount, date_created
+      FROM transactions 
+      WHERE provider_id = ? 
+      AND date_created BETWEEN ? AND ?
+      AND type = 'INCOME' 
+    `, [uid, startTime, endTime])
       .then(data => {
         resolve(data);
       })
