@@ -1,5 +1,8 @@
 const { logger } = require('../../../helpers');
+const formatter = require('../../../utils/formatter');
 const expense = require('../../expense/models/Expense');
+
+const add = (accumulator, currentValue) => accumulator + currentValue.amount;
 
 module.exports = {
   ADD_EXPENSE: (response, user) => {
@@ -33,7 +36,13 @@ module.exports = {
           context.end_date
         )
         .then(result => {
-          response.context.actionResult = result;
+          if (result.length > 0) {
+            response.output.generic[0].list = result;
+            response.output.generic[0].response_type = 'list';
+            response.output.generic[0].action = 'VIEW_EXPENSE';
+          } else {
+            response.output.generic[0].text = 'No transactions found on the date provided.';
+          }
           resolve(response);
         })
         .catch(err => {
@@ -52,7 +61,15 @@ module.exports = {
           context.end_date
         )
         .then(result => {
-          response.context.actionResult = result;
+          if (result.length > 0) {
+            const total = result.reduce(add, 0);
+            response.output.generic[0].text = `
+              You have spent a total of ${formatter.toCurreny(total)} 
+              from ${formatter.toDate(response.context.start_date)} 
+              to ${formatter.toDate(response.context.end_date)}`;
+          } else {
+            response.output.generic[0].text = 'No transactions found on the date provided.';
+          }
           resolve(response);
         })
         .catch(err => {

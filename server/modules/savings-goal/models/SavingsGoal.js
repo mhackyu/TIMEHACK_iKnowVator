@@ -15,6 +15,21 @@ module.exports.create = data => {
   });
 };
 
+module.exports.addToSavings = data => {
+  const ACTION = '[addToSavings]';
+  logger.info(`${TAG}${ACTION} args - ${JSON.stringify(data)}`);
+  return new Promise((resolve, reject) => {
+    data.type = 'SAVINGS';
+    db.execute('INSERT INTO transactions SET ?', data)
+      .then(data => {
+        resolve(data);
+      })
+      .catch(err => {
+        reject(errors.raise('INTERNAL_SERVER_ERROR'));
+      });
+  });
+};
+
 module.exports.getByStartDateAndEndDate = (uid, startTime, endTime) => {
   const ACTION = '[getByStartDateAndEndDate]';
   logger.info(`${TAG}${ACTION} args - ${JSON.stringify({uid, startTime, endTime})}`);
@@ -38,18 +53,35 @@ module.exports.getByStartDateAndEndDate = (uid, startTime, endTime) => {
   });
 };
 
+module.exports.getByStartDate = (uid, startTime, endTime) => {
+  const ACTION = '[getByStartDateAndEndDate]';
+  logger.info(`${TAG}${ACTION} args - ${JSON.stringify({uid, startTime, endTime})}`);
+  return new Promise((resolve, reject) => {
+    db.execute(
+      `
+      SELECT id, current_amount, goal_amount, date_start, date_end, date_modified
+      FROM savings_goals 
+      WHERE provider_id = ? 
+      AND date_start BETWEEN DATE_FORMAT(?, '%Y-%m-%d') AND DATE_FORMAT(?, '%Y-%m-%d')
+    `,
+      [uid, startTime, endTime]
+    )
+      .then(data => {
+        resolve(data);
+      })
+      .catch(err => {
+        reject(errors.raise('INTERNAL_SERVER_ERROR'));
+      });
+  });
+};
+
 module.exports.update = (uid, id, data) => {
   const ACTION = '[update]';
   logger.info(`${TAG}${ACTION} args - ${JSON.stringify({ uid, id, data })}`);
   return new Promise((resolve, reject) => {
     db.execute('UPDATE savings_goals SET ? WHERE provider_id = ? AND id = ?', [data, uid, id])
       .then(data => {
-        if (data.affectedRows > 0) {
-          resolve({
-            status: 200,
-            msg: 'Successfully updated.'
-          });
-        }
+        resolve(data);
       })
       .catch(err => {
         reject(errors.raise('INTERNAL_SERVER_ERROR'));

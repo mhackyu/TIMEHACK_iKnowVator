@@ -2,7 +2,7 @@
   <div class="list">
     <ul >
       <li v-for="(item, index) in items" :key="index" class="list-item"> 
-        {{ item.description }} on {{ formatDate(item.date_created) }}.
+        You have saved {{ formatCurrency(item.current_amount) }} / {{ formatCurrency(item.goal_amount) }} from {{ formatDate(item.date_start) }} to {{ formatDate(item.date_end) }}.
       </li>
     </ul>
   </div>
@@ -18,6 +18,9 @@ export default {
   methods: {
     formatDate(data) {
       return format.toDate(data);
+    },
+    formatCurrency(data) {
+      return format.toCurreny(data);
     }
   },
 }
