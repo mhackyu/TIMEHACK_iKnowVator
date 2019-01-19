@@ -1,0 +1,81 @@
+
+body{
+  background-color: #44e8d3;
+}
+
+.panda{
+  background-image: url("https://media.giphy.com/media/bJnqyzhYlF8LS/giphy.gif");
+  background-size: 80px;
+}
+
+.no-panda{
+  background-image: url("https://thumbs.gfycat.com/RadiantJoyousGrayling-max-1mb.gif");
+  background-size: 150px;
+}
+
+#overlay{
+  width:200px;
+  position:absolute; /*You may also use fixed depending on your needs.*/
+  left:40;
+  top:40; /*If you want it at the bottom you probably want bottom:0 instead*/
+  animation: mymove 30s infinite;
+  }
+
+  @keyframes mymove {
+    0% {left: 0%;z-index: 999;}
+    50% {left: calc(100% - 200px);
+      transform: scaleX(1);
+    z-index: 999;}
+    51%{ z-index: 1;}
+    60% {transform: scaleX(-1);}
+    90%{transform: scaleX(-1);z-index: 1;}
+    100% {
+      transform: scaleX(1);
+      left: 0%;
+      z-index: 999;
+    }
+  }
+
+#app {
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: -webkit-fill-available;
+}
+#nav {
+  padding: 30px;
+  background: #1c2938;
+}
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+main > .container {
+  padding: 60px 15px 0;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: 60px;
+  background: #222;
+  color: white;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
