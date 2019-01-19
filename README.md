@@ -33,6 +33,8 @@ She'll also give you daily reports of how much you spent, how much you've earned
 
 ## So what are you waiting for? Try out iKnowVator's FinanceBot today!
 
+![Sample screenshot](https://i.imgur.com/M5vawBL.png)
+
 # Getting Started
 
 ## Installation
