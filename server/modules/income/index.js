@@ -2,12 +2,12 @@ const router = require('express').Router();
 const expense = require('./models/Income');
 const mw = require('../../middlewares/JWT');
 
-router.post('/', mw.verifyToken, (req, res) => {
+router.post('/', (req, res) => {
   const trans = { ...req.body };
-  trans.provider_id = req.user.provider_id;
+  // trans.provider_id = req.user.provider_id;
 
   expense
-    .create(trans)
+    .c(trans)
     .then(result => {
       if (result.affectedRows > 0) {
         res.send({
@@ -21,7 +21,7 @@ router.post('/', mw.verifyToken, (req, res) => {
     });
 });
 
-router.get('/', mw.verifyToken, (req, res) => {
+router.get('/', (req, res) => {
   const trans = { ...req.body };
   trans.provider_id = req.user.provider_id;
 
