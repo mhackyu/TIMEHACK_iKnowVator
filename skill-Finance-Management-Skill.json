@@ -1,0 +1,7616 @@
+{
+  "name": "Finance Management Skill",
+  "intents": [
+    {
+      "intent": "Keep_Budget",
+      "examples": [
+        {
+          "text": "Alright, I'm keeping your old budget. It's continuing to track your expenses."
+        },
+        {
+          "text": "Alright, I'm keeping your old budget. You can add to it instead."
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Keep_Savings_Goal",
+      "examples": [
+        {
+          "text": "Keep current savings goal"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Bot_Control_Start_Over",
+      "examples": [
+        {
+          "text": "Let us reopen this again."
+        },
+        {
+          "text": "One more time from the beginning"
+        },
+        {
+          "text": "Please initiate from the beginning"
+        },
+        {
+          "text": "Please reset"
+        },
+        {
+          "text": "Please start a new chat"
+        },
+        {
+          "text": "Restart"
+        },
+        {
+          "text": "Actually, let's start over"
+        },
+        {
+          "text": "Back to the beginning"
+        },
+        {
+          "text": "Back to the top"
+        },
+        {
+          "text": "Begin over!"
+        },
+        {
+          "text": "Can we please start over?"
+        },
+        {
+          "text": "How can I start over?"
+        },
+        {
+          "text": "I need to reset."
+        },
+        {
+          "text": "We will need to begin again"
+        },
+        {
+          "text": "We need a do-over"
+        },
+        {
+          "text": "Start over"
+        },
+        {
+          "text": "I would like to start all over"
+        },
+        {
+          "text": "I want start from the beginning"
+        },
+        {
+          "text": "Let's pick this up from the top again."
+        },
+        {
+          "text": "Let's go back to square one"
+        }
+      ],
+      "description": "Restart bot or current flow."
+    },
+    {
+      "intent": "General_Security_Assurance",
+      "examples": [
+        {
+          "text": "How do I know this chat is not a scam?"
+        },
+        {
+          "text": "How is my credit card info secured?"
+        },
+        {
+          "text": "How safe is my data?"
+        },
+        {
+          "text": "I'd like proof of a secure chat"
+        },
+        {
+          "text": "In what way can I tell if my plastic is safe?"
+        },
+        {
+          "text": "Is my card info secure?"
+        },
+        {
+          "text": "Is my payment information secure?"
+        },
+        {
+          "text": "Is there a reason to distrust this chat?"
+        },
+        {
+          "text": "Protection hacks?"
+        },
+        {
+          "text": "Are you safe on hackers?"
+        },
+        {
+          "text": "Are you safe?"
+        },
+        {
+          "text": "Can I be sure that my stored card details are held securely?"
+        },
+        {
+          "text": "Conversation secure?"
+        },
+        {
+          "text": "Customer info secured?"
+        },
+        {
+          "text": "Do you have protection against hacks?"
+        },
+        {
+          "text": "How do I know if my card info is kept safe?"
+        },
+        {
+          "text": "What makes this chat trustworthy?"
+        },
+        {
+          "text": "What safety measures are used to ensure that chat is secure?"
+        },
+        {
+          "text": "Why would I trust this chat?"
+        },
+        {
+          "text": "Will my conversation remain secured?"
+        },
+        {
+          "text": "Secure conversation?"
+        },
+        {
+          "text": "Precautions hackers?"
+        },
+        {
+          "text": "Is this conversation secure?"
+        },
+        {
+          "text": "Is this an official chat?"
+        },
+        {
+          "text": "Is this a trusted chat site?"
+        },
+        {
+          "text": "What guards do you have in place to protect your customer's data?"
+        }
+      ],
+      "description": "Express concerns about the security of the bot."
+    },
+    {
+      "intent": "Add_Expense",
+      "examples": [
+        {
+          "text": "kumain ako ng"
+        },
+        {
+          "text": "i rode for"
+        },
+        {
+          "text": "I paid"
+        },
+        {
+          "text": "i spent @sys-number"
+        },
+        {
+          "text": "add expense record"
+        },
+        {
+          "text": "I paid @currency @sys-number"
+        },
+        {
+          "text": "i ate at"
+        },
+        {
+          "text": "i rode on"
+        },
+        {
+          "text": "im spending"
+        },
+        {
+          "text": "kumain ako sa"
+        },
+        {
+          "text": "binayad ko"
+        },
+        {
+          "text": "I paid for"
+        },
+        {
+          "text": "I'm buying"
+        },
+        {
+          "text": "bumili ako ng"
+        },
+        {
+          "text": "nagbayad ako"
+        },
+        {
+          "text": "magbabayad ako"
+        },
+        {
+          "text": "nagbayad ako ng"
+        },
+        {
+          "text": "track my expense"
+        },
+        {
+          "text": "I bought"
+        },
+        {
+          "text": "I bought something"
+        },
+        {
+          "text": "I want to add an expense"
+        },
+        {
+          "text": "binayaran ko"
+        },
+        {
+          "text": "ibinayad ko ang"
+        },
+        {
+          "text": "ibinayad ko na"
+        },
+        {
+          "text": "gumastos ako"
+        },
+        {
+          "text": "nakapagbayad ako"
+        },
+        {
+          "text": "nakapagbayad ako ng"
+        },
+        {
+          "text": "I'm paying for"
+        },
+        {
+          "text": "gumastos ako ng"
+        },
+        {
+          "text": "ginastos ko ang"
+        },
+        {
+          "text": "nakaltasan ako ng"
+        },
+        {
+          "text": "I'm spending"
+        },
+        {
+          "text": "I paid @sys-number @currency"
+        }
+      ],
+      "description": "User wants to add an expense or spending for storing and tracking"
+    },
+    {
+      "intent": "List_Expenses",
+      "examples": [
+        {
+          "text": "List my expenses"
+        },
+        {
+          "text": "show my expense transactions"
+        },
+        {
+          "text": "view expense trasactions"
+        },
+        {
+          "text": "i want to see my expenses"
+        },
+        {
+          "text": "i want to see my expense transactions"
+        }
+      ],
+      "description": "User wants system to list all expense transactions from a certain time range"
+    },
+    {
+      "intent": "General_Connect_to_Agent",
+      "examples": [
+        {
+          "text": "I need to speak to a representative. How would I go about doing so?"
+        },
+        {
+          "text": "I want agent"
+        },
+        {
+          "text": "I want an agent to help me"
+        },
+        {
+          "text": "I want to talk to a person"
+        },
+        {
+          "text": "I would like to speak to a human"
+        },
+        {
+          "text": "I would like to speak to someone"
+        },
+        {
+          "text": "Is there anyone there I can actually talk to for real?"
+        },
+        {
+          "text": "Need help from human"
+        },
+        {
+          "text": "Operator please"
+        },
+        {
+          "text": "Please assist me to get to an agent"
+        },
+        {
+          "text": "Please connect me to a live agent"
+        },
+        {
+          "text": "Please let me talk to a human being."
+        },
+        {
+          "text": "Pls connect"
+        },
+        {
+          "text": "Put me through to someone"
+        },
+        {
+          "text": "Send me to an agent"
+        },
+        {
+          "text": "Where is the closest agent?"
+        },
+        {
+          "text": "Yes, take me to a real person"
+        },
+        {
+          "text": "I don't want to talk to you"
+        },
+        {
+          "text": "I don't want to talk to a bot."
+        },
+        {
+          "text": "How can I skip the recorded menu and go straight to a live person?"
+        },
+        {
+          "text": "Hi can you transfer me"
+        },
+        {
+          "text": "Do not want a robot?"
+        },
+        {
+          "text": "Customer service representative please."
+        },
+        {
+          "text": "Could you please transfer me to your master?"
+        },
+        {
+          "text": "Contact person"
+        },
+        {
+          "text": "Connect me to a live operator please."
+        },
+        {
+          "text": "Can you connect me with a real person?"
+        },
+        {
+          "text": "Can you assist me to connect to an agent?"
+        },
+        {
+          "text": "A real agent, please."
+        },
+        {
+          "text": "Agent help"
+        },
+        {
+          "text": "Call agent"
+        },
+        {
+          "text": "Can I connect to an agent?"
+        },
+        {
+          "text": "Can I speak to a human please?"
+        },
+        {
+          "text": "Can I speak to a live person?"
+        },
+        {
+          "text": "Can I speak to an advisor?"
+        },
+        {
+          "text": "Can I speak with somebody?"
+        },
+        {
+          "text": "Can I talk to someone?"
+        },
+        {
+          "text": "I want a manager"
+        }
+      ],
+      "description": "Request a human agent."
+    },
+    {
+      "intent": "Bot_Control_Change_Subject",
+      "examples": [
+        {
+          "text": "Change topic"
+        },
+        {
+          "text": "Can we talk about something else?"
+        },
+        {
+          "text": "Help me with this other question"
+        },
+        {
+          "text": "I have one more question"
+        },
+        {
+          "text": "Let us change the topic"
+        },
+        {
+          "text": "Let us talk about something else"
+        },
+        {
+          "text": "Talk about something else"
+        },
+        {
+          "text": "A different matter"
+        },
+        {
+          "text": "Another thing"
+        },
+        {
+          "text": "Here is another issue"
+        },
+        {
+          "text": "Discuss something else"
+        },
+        {
+          "text": "Chat about something else"
+        }
+      ],
+      "description": "Change to a different topic."
+    },
+    {
+      "intent": "Ambiguous_Statements",
+      "examples": [
+        {
+          "text": "money"
+        },
+        {
+          "text": "10"
+        },
+        {
+          "text": "10 pesos"
+        },
+        {
+          "text": "i have 100 pesos"
+        },
+        {
+          "text": "2000 pesos"
+        },
+        {
+          "text": "@sys-number"
+        },
+        {
+          "text": "@currency @sys-number"
+        },
+        {
+          "text": "@sys-number @currency"
+        },
+        {
+          "text": "I'm holding @sys-number"
+        },
+        {
+          "text": "I own @sys-number"
+        },
+        {
+          "text": "I have @sys-number"
+        },
+        {
+          "text": "I have cash"
+        },
+        {
+          "text": "pera"
+        }
+      ],
+      "description": "When the user states money-related intents that are unclear"
+    },
+    {
+      "intent": "New_Savings_Goal",
+      "examples": [
+        {
+          "text": "open a new savings goal"
+        },
+        {
+          "text": "i want to save 10k now until end of next week"
+        },
+        {
+          "text": "Add new savings goal"
+        },
+        {
+          "text": "i want to save this amount by"
+        },
+        {
+          "text": "i need to save by"
+        },
+        {
+          "text": "i have to save before"
+        },
+        {
+          "text": "i wanna start saving"
+        },
+        {
+          "text": "i want to save by"
+        },
+        {
+          "text": "i want a new savings goal"
+        },
+        {
+          "text": "i want to start saving"
+        },
+        {
+          "text": "i want to save this much"
+        },
+        {
+          "text": "my savings goal is"
+        },
+        {
+          "text": "i want to save @sys-number by $end_date"
+        },
+        {
+          "text": "savings goal starting $start_date until $end_date"
+        }
+      ],
+      "description": "user wants a new personal or group savings goal"
+    },
+    {
+      "intent": "List_Income",
+      "examples": [
+        {
+          "text": "list my income"
+        },
+        {
+          "text": "list all income transactions"
+        },
+        {
+          "text": "list income transactions"
+        },
+        {
+          "text": "list my income transactions"
+        },
+        {
+          "text": "i want to see all my earnings"
+        },
+        {
+          "text": "list all my earnings"
+        }
+      ],
+      "description": "User wants to list all income transactions"
+    },
+    {
+      "intent": "Add_to_Budget",
+      "examples": [
+        {
+          "text": "pakidagdagan ng @sys-number ang budget"
+        },
+        {
+          "text": "update budget capacity"
+        },
+        {
+          "text": "Add to budget"
+        },
+        {
+          "text": "please increase budget capacity"
+        },
+        {
+          "text": "add @sys-number to my budget"
+        },
+        {
+          "text": "dagdagan ang budget"
+        }
+      ],
+      "description": "user want to increase budget capacity"
+    },
+    {
+      "intent": "Bot_Control_Ignore_Undo",
+      "examples": [
+        {
+          "text": "Wait! Let's back up few steps and do that again"
+        },
+        {
+          "text": "Hold on! I think I want to do it differently."
+        },
+        {
+          "text": "I did not mean that?"
+        },
+        {
+          "text": "I didn't mean to do that actually, let's go back"
+        },
+        {
+          "text": "Ignore this"
+        },
+        {
+          "text": "It's not what I mean"
+        },
+        {
+          "text": "Let us redo that again!"
+        },
+        {
+          "text": "Never mind"
+        },
+        {
+          "text": "Never"
+        },
+        {
+          "text": "Not yet"
+        },
+        {
+          "text": "Nothing"
+        },
+        {
+          "text": "Cancel"
+        },
+        {
+          "text": "No, I want to do something else."
+        },
+        {
+          "text": "I change my mind."
+        },
+        {
+          "text": "Actually, I take that back"
+        }
+      ],
+      "description": "Ask the bot to take one step back."
+    },
+    {
+      "intent": "Bot_Control_Approve_Response",
+      "examples": [
+        {
+          "text": "Sure thing!"
+        },
+        {
+          "text": "All right"
+        },
+        {
+          "text": "Correct"
+        },
+        {
+          "text": "For sure!"
+        },
+        {
+          "text": "Got it"
+        },
+        {
+          "text": "Great"
+        },
+        {
+          "text": "I agree"
+        },
+        {
+          "text": "I like that"
+        },
+        {
+          "text": "Indeed!"
+        },
+        {
+          "text": "Sweet"
+        },
+        {
+          "text": "That is precisely what I was looking for"
+        },
+        {
+          "text": "That is right"
+        },
+        {
+          "text": "That is the proper response."
+        },
+        {
+          "text": "That is what I need"
+        },
+        {
+          "text": "That's exactly what I want"
+        },
+        {
+          "text": "This is alright"
+        },
+        {
+          "text": "Very well. Let's do it."
+        },
+        {
+          "text": "Yeah, that's it!"
+        },
+        {
+          "text": "Affirmative. That's what I'm looking for."
+        },
+        {
+          "text": "You read my mind"
+        },
+        {
+          "text": "Yes"
+        }
+      ],
+      "description": "Acknowledge that the response satisfies a question."
+    },
+    {
+      "intent": "Overwrite_Savings_Goal",
+      "examples": [
+        {
+          "text": "Overwrite my old savings goal"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Add_Income",
+      "examples": [
+        {
+          "text": "I got"
+        },
+        {
+          "text": "my salary is"
+        },
+        {
+          "text": "i earned"
+        },
+        {
+          "text": "add to group savings"
+        },
+        {
+          "text": "add to"
+        },
+        {
+          "text": "my salary was"
+        },
+        {
+          "text": "i got from this person"
+        },
+        {
+          "text": "this person paid me"
+        },
+        {
+          "text": "my friend paid me"
+        },
+        {
+          "text": "i got from"
+        },
+        {
+          "text": "she paid me"
+        },
+        {
+          "text": "he paid me"
+        },
+        {
+          "text": "paid me"
+        },
+        {
+          "text": "i was paid"
+        },
+        {
+          "text": "add to my personal"
+        },
+        {
+          "text": "earnings"
+        },
+        {
+          "text": "add to my savings"
+        },
+        {
+          "text": "i got on my paycheck"
+        },
+        {
+          "text": "may pay was"
+        },
+        {
+          "text": "my allowance was"
+        }
+      ],
+      "description": "user wants to add and track income gained"
+    },
+    {
+      "intent": "Add_to_Savings",
+      "examples": [
+        {
+          "text": "i saved 15 pesos today"
+        },
+        {
+          "text": "add @sys-number to my savings goal"
+        },
+        {
+          "text": "i am going to save @sys-number"
+        },
+        {
+          "text": "add to my savings"
+        },
+        {
+          "text": "i am gonna save @sys-number"
+        },
+        {
+          "text": "save @sys-number"
+        },
+        {
+          "text": "Add to savings goal"
+        },
+        {
+          "text": "add @sys-number to my savings"
+        },
+        {
+          "text": "I saved @sys-number today"
+        }
+      ],
+      "description": "User wants to add to savings goal"
+    },
+    {
+      "intent": "Bot_Control_Unsure",
+      "examples": [
+        {
+          "text": "I don t know what you want"
+        },
+        {
+          "text": "I haven't got a clue"
+        },
+        {
+          "text": "I m not yet convinced"
+        },
+        {
+          "text": "No clue"
+        },
+        {
+          "text": "I m not sure what will make you happy"
+        },
+        {
+          "text": "I m not certain I get what you re saying"
+        },
+        {
+          "text": "You got me"
+        },
+        {
+          "text": "To be honest, I m really not sure"
+        },
+        {
+          "text": "No idea"
+        },
+        {
+          "text": "I have no idea, actually"
+        },
+        {
+          "text": "I have no idea what you are looking for"
+        },
+        {
+          "text": "I don t know what you need"
+        }
+      ],
+      "description": "Indicate no definite answer to a question."
+    },
+    {
+      "intent": "General_Negative_Feedback",
+      "examples": [
+        {
+          "text": "Why are you stupid?"
+        },
+        {
+          "text": "You're really irritating"
+        },
+        {
+          "text": "You're too stupid"
+        },
+        {
+          "text": "Everyone hates you"
+        },
+        {
+          "text": "Do not like you?"
+        },
+        {
+          "text": "I hate this!"
+        },
+        {
+          "text": "Hate you"
+        },
+        {
+          "text": "I do not like you"
+        },
+        {
+          "text": "I hate you"
+        },
+        {
+          "text": "It is annoying"
+        },
+        {
+          "text": "Quit annoying me"
+        },
+        {
+          "text": "Robots are boring"
+        },
+        {
+          "text": "Robots are stupid"
+        },
+        {
+          "text": "Stupid"
+        },
+        {
+          "text": "Why are you so annoying?"
+        },
+        {
+          "text": "You're really frustrating"
+        },
+        {
+          "text": "You are having delusions"
+        },
+        {
+          "text": "You are on my nerves"
+        },
+        {
+          "text": "You are very frustrating"
+        },
+        {
+          "text": "You do not seem smart"
+        }
+      ],
+      "description": "Express unfavorable feedback."
+    },
+    {
+      "intent": "Report_Expense",
+      "examples": [
+        {
+          "text": "i want to see expense report"
+        },
+        {
+          "text": "show my expense report"
+        },
+        {
+          "text": "Yes, please show my expense report"
+        },
+        {
+          "text": "expense summary"
+        },
+        {
+          "text": "i want to see a summary of my expenses"
+        },
+        {
+          "text": "my expense report please"
+        }
+      ],
+      "description": "user wants a summary report of all incurred expenses"
+    },
+    {
+      "intent": "User_Tutorial",
+      "examples": [
+        {
+          "text": "It's my first time using this bot"
+        },
+        {
+          "text": "Teach me how to use this bot"
+        },
+        {
+          "text": "Teach me how to use this app"
+        },
+        {
+          "text": "Teach me how to use you"
+        },
+        {
+          "text": "How do I use this chatbot"
+        },
+        {
+          "text": "How do I use this bot?"
+        },
+        {
+          "text": "I want a tutorial"
+        },
+        {
+          "text": "Tutorial please"
+        },
+        {
+          "text": "Tutorial"
+        },
+        {
+          "text": "Teach me"
+        },
+        {
+          "text": "How does this work"
+        }
+      ],
+      "description": "User requests bot to teach him/her how to use the bot."
+    },
+    {
+      "intent": "General_Ending",
+      "examples": [
+        {
+          "text": "I have got to go"
+        },
+        {
+          "text": "Stop talking to me"
+        },
+        {
+          "text": "Stop doing this"
+        },
+        {
+          "text": "Shut up"
+        },
+        {
+          "text": "See you"
+        },
+        {
+          "text": "See you later"
+        },
+        {
+          "text": "Ok goodbye"
+        },
+        {
+          "text": "Cya later"
+        },
+        {
+          "text": "End trial"
+        },
+        {
+          "text": "Ending this session"
+        },
+        {
+          "text": "Finished now, good bye"
+        },
+        {
+          "text": "Get lost"
+        },
+        {
+          "text": "Go away"
+        },
+        {
+          "text": "Go off"
+        },
+        {
+          "text": "Going now"
+        },
+        {
+          "text": "Good. bye."
+        },
+        {
+          "text": "Goodbye"
+        },
+        {
+          "text": "Have a nice day?"
+        },
+        {
+          "text": "It was nice chatting with you"
+        },
+        {
+          "text": "I'm leaving now"
+        },
+        {
+          "text": "Im good thank you"
+        },
+        {
+          "text": "I'm done"
+        },
+        {
+          "text": "Im done"
+        },
+        {
+          "text": "I want to quit"
+        },
+        {
+          "text": "Hey bot go away"
+        },
+        {
+          "text": "I am leaving"
+        },
+        {
+          "text": "I am out of here"
+        },
+        {
+          "text": "I d like to stop doing this"
+        },
+        {
+          "text": "Thank you for your time"
+        },
+        {
+          "text": "Catch you later"
+        },
+        {
+          "text": "Bye now"
+        },
+        {
+          "text": "Bye bye"
+        },
+        {
+          "text": "Time to go"
+        },
+        {
+          "text": "That's everything"
+        },
+        {
+          "text": "That is all"
+        },
+        {
+          "text": "Thanks very much, bye!"
+        },
+        {
+          "text": "Thanks, bye!"
+        }
+      ],
+      "description": "End the conversation."
+    },
+    {
+      "intent": "General_Agent_Capabilities",
+      "examples": [
+        {
+          "text": "How can you solve my problems?"
+        },
+        {
+          "text": "How can you help me?"
+        },
+        {
+          "text": "How can I use you?"
+        },
+        {
+          "text": "Hi, what do you do?"
+        },
+        {
+          "text": "Help now"
+        },
+        {
+          "text": "Do you have a list of things I can talk to you about?"
+        },
+        {
+          "text": "Can you tell me what services you are able to help me with?"
+        },
+        {
+          "text": "Can you please give me a list of the types of things you can help me with?"
+        },
+        {
+          "text": "What features are in here?"
+        },
+        {
+          "text": "Where can I find the frequently asked questions?"
+        },
+        {
+          "text": "What is this 4?"
+        },
+        {
+          "text": "What kinds of things can you do?"
+        },
+        {
+          "text": "What else can you help me with?"
+        },
+        {
+          "text": "What do you handle?"
+        },
+        {
+          "text": "What do you do?"
+        },
+        {
+          "text": "What can I ask you to do?"
+        },
+        {
+          "text": "What are your skills?"
+        },
+        {
+          "text": "What are you used for?"
+        },
+        {
+          "text": "What are you good at?"
+        },
+        {
+          "text": "What are you capable of?"
+        },
+        {
+          "text": "What are you able to understand?"
+        },
+        {
+          "text": "Is there anything you can help me with?"
+        },
+        {
+          "text": "Tell me about what kind of things you do?"
+        },
+        {
+          "text": "What are my options?"
+        },
+        {
+          "text": "Tell me something"
+        },
+        {
+          "text": "What are you able to deal with?"
+        },
+        {
+          "text": "What are my options that you can help with?"
+        },
+        {
+          "text": "How do I use you?"
+        },
+        {
+          "text": "I do not know what to ask"
+        },
+        {
+          "text": "I'd like to know what type of questions you can answer for me."
+        }
+      ],
+      "description": "Request capabilities of the bot."
+    },
+    {
+      "intent": "Bot_Control_Standby",
+      "examples": [
+        {
+          "text": "Out for a break"
+        },
+        {
+          "text": "Wait"
+        },
+        {
+          "text": "Back again soon"
+        },
+        {
+          "text": "Be back later"
+        },
+        {
+          "text": "Be patient with me"
+        },
+        {
+          "text": "Can you give me a moment?"
+        },
+        {
+          "text": "Can you wait for me?"
+        },
+        {
+          "text": "Give me a few minutes to get together"
+        },
+        {
+          "text": "Give me a moment"
+        },
+        {
+          "text": "Give me a second"
+        },
+        {
+          "text": "Hold on"
+        },
+        {
+          "text": "I want stop a moment"
+        },
+        {
+          "text": "I will be back"
+        },
+        {
+          "text": "I would like to put you on hold"
+        },
+        {
+          "text": "In a moment"
+        },
+        {
+          "text": "Just a sec"
+        },
+        {
+          "text": "Just hold on"
+        },
+        {
+          "text": "Keep holding"
+        },
+        {
+          "text": "Let me see"
+        },
+        {
+          "text": "Need a minute here"
+        }
+      ],
+      "description": "Indicate a delay in providing input to the bot."
+    },
+    {
+      "intent": "Set_Report_Schedule",
+      "examples": [
+        {
+          "text": "report to me at"
+        },
+        {
+          "text": "set reports to"
+        },
+        {
+          "text": "set report schedule"
+        },
+        {
+          "text": "report at this time"
+        },
+        {
+          "text": "summarize my spendings on"
+        },
+        {
+          "text": "i want my summary every"
+        },
+        {
+          "text": "i want my summary on"
+        },
+        {
+          "text": "report to me every"
+        },
+        {
+          "text": "set report schedule every"
+        },
+        {
+          "text": "i want to hear my report now"
+        },
+        {
+          "text": "i want to hear my report during"
+        },
+        {
+          "text": "i want to hear my report on"
+        }
+      ],
+      "description": "user sets the schedule for income/expense report"
+    },
+    {
+      "intent": "Report_Savings",
+      "examples": [
+        {
+          "text": "i want to see my savings summary"
+        },
+        {
+          "text": "savings summary please"
+        },
+        {
+          "text": "View savings report"
+        }
+      ],
+      "description": "user wants a summary report of savings goal"
+    },
+    {
+      "intent": "General_Positive_Feedback",
+      "examples": [
+        {
+          "text": "I'm looking forward to working with you again! :)"
+        },
+        {
+          "text": "Love your work"
+        },
+        {
+          "text": "This is good"
+        },
+        {
+          "text": "Thank you"
+        },
+        {
+          "text": "This is great"
+        },
+        {
+          "text": "Brilliant!"
+        },
+        {
+          "text": "You've been so helpful :)"
+        },
+        {
+          "text": "You're a genius!"
+        },
+        {
+          "text": "You the man"
+        },
+        {
+          "text": "You gave me exactly what I need!"
+        },
+        {
+          "text": "You are wonderful"
+        },
+        {
+          "text": "Can't believe you are that good"
+        },
+        {
+          "text": "You are the best"
+        },
+        {
+          "text": "You are great"
+        },
+        {
+          "text": "You are awesome"
+        },
+        {
+          "text": "This is so cool"
+        },
+        {
+          "text": "Ok thank you"
+        },
+        {
+          "text": "How cool is this?"
+        },
+        {
+          "text": "I like what you did there! :)"
+        }
+      ],
+      "description": "Express positive sentiment or gratitude."
+    },
+    {
+      "intent": "General_About_You",
+      "examples": [
+        {
+          "text": "Can I use another language?"
+        },
+        {
+          "text": "About you"
+        },
+        {
+          "text": "Tell me about your life"
+        },
+        {
+          "text": "Tell me something about yourself"
+        },
+        {
+          "text": "What languages do you speak?"
+        },
+        {
+          "text": "What should I know about you?"
+        },
+        {
+          "text": "What's your name?"
+        },
+        {
+          "text": "Where are you from?"
+        },
+        {
+          "text": "Where were you born?"
+        },
+        {
+          "text": "Who are you?"
+        },
+        {
+          "text": "Why are you here?"
+        },
+        {
+          "text": "Let us talk about you"
+        },
+        {
+          "text": "Introduce your self"
+        },
+        {
+          "text": "I want to set up the chat bot for my shop"
+        },
+        {
+          "text": "How old are you?"
+        },
+        {
+          "text": "How do you function?"
+        },
+        {
+          "text": "How can I configure you?"
+        },
+        {
+          "text": "Do you know who you are?"
+        },
+        {
+          "text": "Do you have a name?"
+        },
+        {
+          "text": "Describe your self"
+        }
+      ],
+      "description": "Request generic personal attributes."
+    },
+    {
+      "intent": "General_Jokes",
+      "examples": [
+        {
+          "text": "Tell me a joke"
+        },
+        {
+          "text": "Tell me something funny"
+        },
+        {
+          "text": "What do you do for fun?"
+        },
+        {
+          "text": "What is your favorite joke?"
+        },
+        {
+          "text": "Another joke"
+        },
+        {
+          "text": "Are there jokes?"
+        },
+        {
+          "text": "Can you tell a joke?"
+        },
+        {
+          "text": "Can you tell me a joke?"
+        },
+        {
+          "text": "Do you have a joke?"
+        },
+        {
+          "text": "Do you have humor?"
+        },
+        {
+          "text": "Do you like fun?"
+        },
+        {
+          "text": "Do you like humor?"
+        },
+        {
+          "text": "I am getting bored"
+        },
+        {
+          "text": "I want a joke"
+        },
+        {
+          "text": "I'm bored"
+        },
+        {
+          "text": "One more joke"
+        },
+        {
+          "text": "Surprise me with something hilarious"
+        }
+      ],
+      "description": "Request a joke."
+    },
+    {
+      "intent": "Overwrite_Budget",
+      "examples": [
+        {
+          "text": "Alright, I'll overwrite your old budget goal to $amount"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Report_Income",
+      "examples": [
+        {
+          "text": "view income report"
+        },
+        {
+          "text": "i want to see my income report"
+        },
+        {
+          "text": "how much have i earned"
+        },
+        {
+          "text": "show my income report"
+        },
+        {
+          "text": "show income report"
+        },
+        {
+          "text": "view my income report"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Help",
+      "examples": [
+        {
+          "text": "example please"
+        },
+        {
+          "text": "/help"
+        },
+        {
+          "text": "what do i put"
+        },
+        {
+          "text": "help"
+        },
+        {
+          "text": "/?"
+        },
+        {
+          "text": "?"
+        },
+        {
+          "text": "can i have an example?"
+        }
+      ],
+      "description": "when user doesn't know what to input and asks for help"
+    },
+    {
+      "intent": "General_Greetings",
+      "examples": [
+        {
+          "text": "How have you been?"
+        },
+        {
+          "text": "Good day"
+        },
+        {
+          "text": "Good evening"
+        },
+        {
+          "text": "Good morning"
+        },
+        {
+          "text": "Good to see you"
+        },
+        {
+          "text": "Greetings"
+        },
+        {
+          "text": "Have you been well?"
+        },
+        {
+          "text": "Hello Agent"
+        },
+        {
+          "text": "Hello I am looking for some help here"
+        },
+        {
+          "text": "Hello"
+        },
+        {
+          "text": "Hey how are you doing"
+        },
+        {
+          "text": "Hey there all"
+        },
+        {
+          "text": "Hey there"
+        },
+        {
+          "text": "Hey twin"
+        },
+        {
+          "text": "Hey you"
+        },
+        {
+          "text": "Hi advisor"
+        },
+        {
+          "text": "Hi there"
+        },
+        {
+          "text": "How are things going?"
+        },
+        {
+          "text": "How are you today?"
+        },
+        {
+          "text": "How is it going?"
+        },
+        {
+          "text": "Looking good eve"
+        },
+        {
+          "text": "Ok take me back"
+        },
+        {
+          "text": "What's new?"
+        },
+        {
+          "text": "What's up?"
+        },
+        {
+          "text": "You there"
+        },
+        {
+          "text": "magandang umaga"
+        },
+        {
+          "text": "magandang araw"
+        },
+        {
+          "text": "magandang gabi"
+        },
+        {
+          "text": "magandang hapon"
+        },
+        {
+          "text": "mabuhay"
+        },
+        {
+          "text": "kamusta"
+        },
+        {
+          "text": "kamusta ka"
+        },
+        {
+          "text": "mzta"
+        },
+        {
+          "text": "How r u?"
+        }
+      ],
+      "description": "Greet the bot."
+    },
+    {
+      "intent": "General_Human_or_Bot",
+      "examples": [
+        {
+          "text": "Are you real?"
+        },
+        {
+          "text": "How can you prove you are a human?"
+        },
+        {
+          "text": "Is this a computer?"
+        },
+        {
+          "text": "Tell me, are you a human or no?"
+        },
+        {
+          "text": "Am I chatting with a human?"
+        },
+        {
+          "text": "Am I talking to Watson?"
+        },
+        {
+          "text": "Are you human?"
+        },
+        {
+          "text": "Are you even real?"
+        },
+        {
+          "text": "Am I talking to a person or am I talking to an AI?"
+        },
+        {
+          "text": "Are you a human or a bot?"
+        },
+        {
+          "text": "Are you a robot?"
+        },
+        {
+          "text": "Am I talking to a Bot?"
+        }
+      ],
+      "description": "Ask if speaking to a human or a bot."
+    },
+    {
+      "intent": "Report_Budget",
+      "examples": [
+        {
+          "text": "give me a summary of budget"
+        },
+        {
+          "text": "budget summary"
+        },
+        {
+          "text": "my budget report please"
+        },
+        {
+          "text": "I want to see summary of my budgets"
+        },
+        {
+          "text": "I want to see budget report"
+        },
+        {
+          "text": "show my budget report"
+        }
+      ],
+      "description": "user want to view budget summary"
+    },
+    {
+      "intent": "List_Budget_Transactions",
+      "examples": [
+        {
+          "text": "i want to see all my budgets"
+        },
+        {
+          "text": "I want to see my budgets"
+        },
+        {
+          "text": "list all my budgets"
+        },
+        {
+          "text": "list budget transactions"
+        },
+        {
+          "text": "list my budgets"
+        },
+        {
+          "text": "list my budget transactions"
+        }
+      ],
+      "description": "user want to list budgets"
+    },
+    {
+      "intent": "New_Budget",
+      "examples": [
+        {
+          "text": "I want to add new budget"
+        },
+        {
+          "text": "I need to budget this @sys-number @currency from @sys-date to @sys-date"
+        },
+        {
+          "text": "I need to budget this @sys-number from @sys-date to @sys-date"
+        },
+        {
+          "text": "my budget is @sys-number"
+        },
+        {
+          "text": "i want to budget @sys-number until @sys-date"
+        },
+        {
+          "text": "i want to budget @sys-number for @sys-date"
+        },
+        {
+          "text": "I want to spend"
+        },
+        {
+          "text": "I want to start budgeting"
+        },
+        {
+          "text": "I want to create a new budget"
+        },
+        {
+          "text": "mag budget ako"
+        },
+        {
+          "text": "Add new budget"
+        },
+        {
+          "text": "i want to budget @sys-number @currency until @sys-date"
+        }
+      ],
+      "description": "User wants to add new budget"
+    },
+    {
+      "intent": "List_Savings",
+      "examples": [
+        {
+          "text": "List transactions in savings goal"
+        }
+      ],
+      "description": "user wants to view all transactions in savings"
+    },
+    {
+      "intent": "Check_Savings_Goal",
+      "examples": [],
+      "description": "user wants to check the status of his/her savings goal/s"
+    },
+    {
+      "intent": "Bot_Control_Clarification",
+      "examples": [
+        {
+          "text": "What are you talking about?"
+        },
+        {
+          "text": "What do you mean by that?"
+        },
+        {
+          "text": "What do you mean?"
+        },
+        {
+          "text": "I did not quite understand what you gave me"
+        },
+        {
+          "text": "Explains"
+        },
+        {
+          "text": "Can you say that again please?"
+        },
+        {
+          "text": "I didn't understand that properly"
+        },
+        {
+          "text": "Come again?"
+        },
+        {
+          "text": "Let's try to say that again more clearly, shall we?"
+        },
+        {
+          "text": "I need more information"
+        },
+        {
+          "text": "I don't understand"
+        },
+        {
+          "text": "I don't understand what you're saying"
+        },
+        {
+          "text": "I don't get it"
+        },
+        {
+          "text": "I didn't catch that"
+        },
+        {
+          "text": "What are you referring to?"
+        },
+        {
+          "text": "I didn't quite understand what you said"
+        },
+        {
+          "text": "What are you saying?"
+        }
+      ],
+      "description": "Repeat or clarify last statement."
+    },
+    {
+      "intent": "Bot_Control_Reject_Response",
+      "examples": [
+        {
+          "text": "Wrong response"
+        },
+        {
+          "text": "That answer is incorrect"
+        },
+        {
+          "text": "Not the right response"
+        },
+        {
+          "text": "No"
+        },
+        {
+          "text": "No I'm fine thanks"
+        },
+        {
+          "text": "It is not what I was looking for"
+        },
+        {
+          "text": "It is not what I want"
+        },
+        {
+          "text": "I wasn't looking for that"
+        },
+        {
+          "text": "You're misunderstanding me"
+        },
+        {
+          "text": "I don't want that"
+        },
+        {
+          "text": "Bad response"
+        },
+        {
+          "text": "I disagree"
+        },
+        {
+          "text": "I do not think it is the answer?"
+        },
+        {
+          "text": "I don't need that"
+        },
+        {
+          "text": "You didn't understand me"
+        },
+        {
+          "text": "You did not understand what I said"
+        },
+        {
+          "text": "You did not understand what I asked"
+        },
+        {
+          "text": "That was wrong, try again"
+        },
+        {
+          "text": "That was not my intent"
+        },
+        {
+          "text": "That sounds like the wrong response"
+        },
+        {
+          "text": "That is not true"
+        }
+      ],
+      "description": "Indicate the bot's response does not address a question."
+    },
+    {
+      "intent": "Bot_Control_Confirm_Presence",
+      "examples": [
+        {
+          "text": "Anyone there?"
+        },
+        {
+          "text": "Did you hear what I said?"
+        },
+        {
+          "text": "Did you go somewhere?"
+        },
+        {
+          "text": "Are you there?"
+        },
+        {
+          "text": "Where'd you go?"
+        },
+        {
+          "text": "Speak to me if you are there."
+        },
+        {
+          "text": "Are you leaving me?"
+        },
+        {
+          "text": "Is anybody home?"
+        },
+        {
+          "text": "Is anybody here?"
+        },
+        {
+          "text": "Have I lost you?"
+        },
+        {
+          "text": "Am I talking to someone?"
+        },
+        {
+          "text": "I am still holding"
+        },
+        {
+          "text": "Are you still here with me?"
+        },
+        {
+          "text": "Are you still around?"
+        },
+        {
+          "text": "Are you on?"
+        },
+        {
+          "text": "You around?"
+        }
+      ],
+      "description": "Ask the bot to indicate that it is available."
+    }
+  ],
+  "entities": [
+    {
+      "entity": "module",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Expense",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Budget",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Savings Goal",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Income",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": false
+    },
+    {
+      "entity": "luxuries",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "makeup",
+          "synonyms": [
+            "Hourglass",
+            "Charlotte tilburry",
+            "Becca",
+            "Wet n wild",
+            "Elf",
+            "Colourpop",
+            "Loreal",
+            "Maxfactor",
+            "Covergirl",
+            "Shishiedo",
+            "Nars",
+            "Etude house",
+            "Innisfree",
+            "Clinique",
+            "too faced",
+            "maybelline",
+            "ever bilena",
+            "HMV",
+            "Nichido",
+            "MAC",
+            "Happy Skin",
+            "the body shop",
+            "the face shop",
+            "Colourette",
+            "Ellana",
+            "BLK Cosmetics"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Lenovo",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Nokia",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Huawei",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Oppo",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Cherry Mobile",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "MyPhone",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Vivo",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Spotify",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Netflix",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "HOOQ",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Apple",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Samsung",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Xiaomi",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "laptop",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Dell",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "ASUS",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "luxuries",
+          "synonyms": [
+            "luxury"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "watch",
+          "synonyms": [
+            "Titan",
+            "casio",
+            "rolex",
+            "swatch"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "cellphone",
+          "synonyms": [
+            "samsung",
+            "android",
+            "iphone"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "utilities",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Sun",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "internet",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Meralco",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "utilities",
+          "synonyms": [
+            "utility"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "rent",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "plumbing",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "PLDT",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Sky Cable",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Cablelink",
+          "synonyms": [
+            "cable link"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Destiny Cable",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "broadband",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Globe",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Manila Water",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Smart",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "ilaw",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "tubig",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "TM",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "load",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "cable",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Maynilad",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "DSL",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Converge",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "home internet",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-person",
+      "values": []
+    },
+    {
+      "entity": "income",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "allowance",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "inheritance",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "sideline",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "gig",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "dividends",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "passive income",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "interest",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "salary",
+          "synonyms": [
+            "payslip",
+            "paycheck"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "deposit",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Dad",
+          "synonyms": [
+            "tatay",
+            "father",
+            "daddy"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Mom",
+          "synonyms": [
+            "nanay",
+            "mom",
+            "mother"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "reject",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "nah",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "next time",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "no",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "nope",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "accept",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "yes",
+          "synonyms": [
+            "alright",
+            "yup",
+            "yep",
+            "okay"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "ok",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "sure",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "yeah",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "yes please",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "yeap",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "sige",
+          "synonyms": [
+            "oo"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-date",
+      "values": []
+    },
+    {
+      "entity": "general",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "bags",
+          "synonyms": [
+            "wenger",
+            "samsonite",
+            "travelon",
+            "pacsafe",
+            "hawk",
+            "thule",
+            "anello",
+            "herschel",
+            "Jansport"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Adidas",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "groceries",
+          "synonyms": [
+            "mart",
+            "boutique",
+            "retailer",
+            "pharmacy",
+            "mall",
+            "drugstore",
+            "shop",
+            "walmart",
+            "errands",
+            "hypermarket",
+            "deli",
+            "store",
+            "supermarket",
+            "grocery"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "clothes",
+          "synonyms": [
+            "cardigan",
+            "sundress",
+            "hoodie",
+            "vest",
+            "attire",
+            "outfit",
+            "frock",
+            "sweatshirt",
+            "gown",
+            "jacket",
+            "sportswear",
+            "frocks",
+            "jeggings",
+            "coveralls",
+            "tunic",
+            "socks",
+            "pant",
+            "camisole",
+            "lingerie",
+            "denim",
+            "sweatpants",
+            "overcoats",
+            "costume",
+            "sweater",
+            "coats",
+            "overalls",
+            "capris",
+            "tights",
+            "blouse",
+            "skirt",
+            "leggings",
+            "gowns",
+            "outerwear",
+            "underclothes",
+            "tunics",
+            "skirts",
+            "blouses",
+            "shirt",
+            "dress",
+            "knickers",
+            "slacks",
+            "apparel",
+            "shorts",
+            "dresses",
+            "underpants",
+            "garment",
+            "shirts",
+            "panties",
+            "undies",
+            "trousers",
+            "pants",
+            "sweaters",
+            "robes",
+            "uniforms",
+            "costumes",
+            "undergarments",
+            "jeans",
+            "underwear",
+            "garments"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "SM",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "AlfaMart",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Puregold",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "palengke",
+          "synonyms": [
+            "wet market"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Penguin",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Department Store",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "H&M",
+          "synonyms": [
+            "HnM"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Forever 21",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Uniqlo",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Old Navy",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "American Eagle Outfitters",
+          "synonyms": [
+            "american eagle"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "pet food",
+          "synonyms": [
+            "dog food",
+            "fish food",
+            "feed",
+            "pellets",
+            "cat food"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "pet stuff",
+          "synonyms": [
+            "frisbee",
+            "ball",
+            "chew toy",
+            "pet clothes",
+            "pet shoes",
+            "muffler",
+            "harness",
+            "cage",
+            "leash"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "PUMA",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "shoes",
+          "synonyms": [
+            "converse",
+            "payless",
+            "ezsoft",
+            "islander",
+            "sandugo",
+            "rusty lopez",
+            "saucony",
+            "sperry",
+            "skechers",
+            "Parisian"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Nike",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "general",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "currency",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "PHP",
+          "synonyms": [
+            "Philippine peso",
+            "₱"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "peso",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "pesos",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "USD",
+          "synonyms": [
+            "dollars",
+            "$",
+            "usd"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "JPY",
+          "synonyms": [
+            "¥",
+            "japanese yen",
+            "yen"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "transportation",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "fx",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "transportation",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "jeep",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "bus",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "ferry",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "travel",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "uber",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "UV",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "ship",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "angkas",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "grab",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "gas",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "airplane",
+          "synonyms": [
+            "flight",
+            "plane"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "taxi",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "p2p",
+          "synonyms": [
+            "P2P"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "carpool",
+          "synonyms": [
+            "carpooling"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "food",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Sisig Hooray",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Ramen Nagi",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Silantro Fil-Mex",
+          "synonyms": [
+            "Silantro"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Ippudo",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "La Fiesta",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Spiral",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Yakimix",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "meal",
+          "synonyms": [
+            "dishes",
+            "drinks",
+            "appetizers",
+            "snack",
+            "snacks",
+            "restaurant",
+            "breakfasts",
+            "desserts",
+            "dine",
+            "luncheon",
+            "eat",
+            "lunches",
+            "dinners",
+            "eating",
+            "buffet",
+            "brunch",
+            "breakfast",
+            "dessert",
+            "food",
+            "supper",
+            "lunch",
+            "dinner",
+            "meals"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "food",
+          "synonyms": [
+            "merienda"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "meat",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "restaurant",
+          "synonyms": [
+            "cafeteria",
+            "foods",
+            "eating",
+            "coffee",
+            "ristorante",
+            "food",
+            "trattoria",
+            "eateries",
+            "breakfast",
+            "pizza",
+            "dinners",
+            "supper",
+            "brunch",
+            "meals",
+            "resturant",
+            "lunch",
+            "dine",
+            "meal",
+            "restuarant",
+            "coffeehouse",
+            "pizzeria",
+            "cuisine",
+            "eatery",
+            "steakhouse",
+            "cafe",
+            "bistro",
+            "dinner",
+            "dining",
+            "deli",
+            "diner",
+            "café",
+            "restaurants"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "drink",
+          "synonyms": [
+            "latte",
+            "juice",
+            "fruit juice",
+            "keg",
+            "pints",
+            "refreshments",
+            "ale",
+            "lager",
+            "brew",
+            "liquors",
+            "eating",
+            "wine",
+            "beers",
+            "beverage",
+            "drinking",
+            "eat",
+            "liquor",
+            "beer",
+            "alcohol",
+            "drunk",
+            "booze",
+            "beverages",
+            "drinks"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Jollibee",
+          "synonyms": [
+            "pagkain",
+            "empanada",
+            "turon",
+            "tuyo",
+            "dimsum",
+            "pasalubong",
+            "bangus",
+            "calamares",
+            "chicharron",
+            "fishballs",
+            "adobo",
+            "balut",
+            "kinilaw",
+            "baboy",
+            "bulalo",
+            "bagoong",
+            "lumpia",
+            "dinuguan",
+            "pinakbet",
+            "sinigang",
+            "pansit",
+            "tocino",
+            "chicharon",
+            "longganisa",
+            "bibingka",
+            "lechon",
+            "manok",
+            "pancit",
+            "sisig",
+            "siopao",
+            "pandesal",
+            "mcdo"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "McDonalds",
+          "synonyms": [
+            "mcdonalds",
+            "mcdo"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Ooma",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Chowking",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Lugang",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Vikings",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "KFC",
+          "synonyms": [
+            "Kentucky Fried Chicken"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Gringo",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Tropical Hut",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Pancake House",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "El Pollo Loco",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Yabu",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Nadai Fujisoba",
+          "synonyms": [
+            "nadai"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "food court",
+          "synonyms": [
+            "foodcourt"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "lollipop",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "candy",
+          "synonyms": [
+            "candies",
+            "chocolate",
+            "sweets",
+            "confectionary",
+            "sugar",
+            "confectionery",
+            "taffy",
+            "lollipops",
+            "fudge",
+            "caramel",
+            "cocoa",
+            "lollies",
+            "confections",
+            "pastries",
+            "lollipop",
+            "nougat",
+            "cupcakes",
+            "cheesecake",
+            "brownies",
+            "cakes",
+            "dessert",
+            "confection",
+            "cookies",
+            "macaroons",
+            "caramels",
+            "pastry",
+            "toffee",
+            "truffles",
+            "cupcake",
+            "cake",
+            "scones",
+            "pies",
+            "biscuits",
+            "cookie",
+            "oreos",
+            "puddings",
+            "ganache",
+            "shortbread",
+            "biscuit",
+            "pudding",
+            "macarons",
+            "cheesecakes",
+            "praline",
+            "eclairs",
+            "frosting",
+            "macaroon",
+            "tiramisu",
+            "macaron",
+            "pie",
+            "torte",
+            "biscotti",
+            "crepes",
+            "tarts",
+            "éclairs",
+            "meringue",
+            "marshmallow"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Marugame Udon",
+          "synonyms": [
+            "marugame"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Ramen Kuroda",
+          "synonyms": [
+            "kuroda"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Sari Chicken Lechon",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Single Origin",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Mexicali",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Bonchon",
+          "synonyms": [
+            "Bon Chon"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Tori Chizu",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Wendy's",
+          "synonyms": [
+            "wendys"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Savory",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Moonshine",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Frankie's",
+          "synonyms": [
+            "frankies"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Starbucks",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Turks",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Jamba Juice",
+          "synonyms": [
+            "jamba"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Seattle's Best Coffee",
+          "synonyms": [
+            "SBC"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Coco",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Saboten",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Gelatissimo",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "BLK513",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "Llao Llao",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-number",
+      "values": []
+    }
+  ],
+  "language": "en",
+  "metadata": {
+    "api_version": {
+      "major_version": "v1",
+      "minor_version": "2018-09-20"
+    }
+  },
+  "skill_id": "6945d2c1-1bf5-4fc0-a06e-a5cd4e2c5fe7",
+  "description": "",
+  "dialog_nodes": [
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hi, I'm now tracking that you want to save $amount from <?$start_date.reformatDateTime('MMM dd, yyyy')?> to <?$end_date.reformatDateTime('MMM dd, yyyy')?>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1547701786567",
+      "metadata": {},
+      "conditions": "!$savings",
+      "dialog_node": "node_4_1547714600056",
+      "previous_sibling": "node_2_1547701830464"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "You seem to have already made a savings goal for the same date range."
+              },
+              {
+                "text": "Do you want to overwrite your old savings goal amounting to $savings.goal_amount with this new goal, or keep the old savings goal?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "title": "",
+            "options": [
+              {
+                "label": "Overwrite my old savings goal",
+                "value": {
+                  "input": {
+                    "text": "Overwrite my old savings goal"
+                  }
+                }
+              },
+              {
+                "label": "Keep current savings goal",
+                "value": {
+                  "input": {
+                    "text": "Keep current savings goal"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_1_1547701786567",
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_15_1547716147903"
+      },
+      "conditions": "$savings",
+      "dialog_node": "node_2_1547701830464"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_23_1546935320128",
+      "metadata": {},
+      "event_name": "filled",
+      "dialog_node": "handler_26_1546935320128",
+      "previous_sibling": "handler_25_1546935320128"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_23_1546935320128",
+      "context": {
+        "amount": "@sys-number"
+      },
+      "metadata": {},
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_25_1546935320128",
+      "previous_sibling": "handler_24_1546935320128"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": "How much did you earn?"
+      },
+      "parent": "slot_23_1546935320128",
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_24_1546935320128"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": "Please enter a start date and/or an end date"
+      },
+      "parent": "slot_59_1547486923146",
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_61_1547486923146",
+      "previous_sibling": "handler_60_1547486923146"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_59_1547486923146",
+      "context": {
+        "start_date": "@sys-date[0]"
+      },
+      "metadata": {},
+      "conditions": "@sys-date[0]",
+      "event_name": "input",
+      "dialog_node": "handler_60_1547486923146"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_68_1547488419716",
+      "event_name": "focus",
+      "dialog_node": "handler_70_1547488419716",
+      "previous_sibling": "handler_69_1547488419716"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_68_1547488419716",
+      "context": {
+        "end_date": "@sys-date[1]"
+      },
+      "metadata": {},
+      "conditions": "@sys-date[1]",
+      "event_name": "input",
+      "dialog_node": "handler_69_1547488419716"
+    },
+    {
+      "type": "standard",
+      "title": "Don't Delete this node",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "That wasn't the answer I expected."
+              },
+              {
+                "text": "Let's start over."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_1_1546827563316",
+      "context": {
+        "action": null,
+        "amount": null,
+        "number": null,
+        "category": null,
+        "end_date": null,
+        "start_date": null,
+        "description": null
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_5_1547453278433"
+      },
+      "conditions": "!@accept && !@reject",
+      "dialog_node": "node_3_1547453689193",
+      "previous_sibling": "node_1_1546829529991"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Do you want mo to add another record?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "title": "",
+            "options": [
+              {
+                "label": "Yes",
+                "value": {
+                  "input": {
+                    "text": "yes"
+                  }
+                }
+              },
+              {
+                "label": "No",
+                "value": {
+                  "input": {
+                    "text": "no"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_1_1546827563316",
+      "context": {
+        "number": "@sys-number",
+        "category": "@food@transportation@utilities@general@luxuries"
+      },
+      "disabled": true,
+      "metadata": {},
+      "dialog_node": "node_27_1547359810796",
+      "previous_sibling": "node_3_1547453689193"
+    },
+    {
+      "type": "standard",
+      "output": {},
+      "parent": "node_1_1546827563316",
+      "metadata": {
+        "fallback": "leave",
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@accept || @reject",
+      "dialog_node": "node_1_1546829529991",
+      "digress_out": "allow_all",
+      "previous_sibling": "slot_48_1547438699579"
+    },
+    {
+      "type": "slot",
+      "parent": "node_1_1546827563316",
+      "dialog_node": "slot_48_1547438699579"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Here is your summary income report from <? @sys-date[0].reformatDateTime('MMM dd, yyyy') ?> to <? @sys-date[1].reformatDateTime('MMM dd, yyyy') ?>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_12_1547372837093",
+      "context": {
+        "action": "REPORT_INCOME",
+        "end_date": "@sys-date[1] 23:59:59",
+        "start_date": "@sys-date[0] 00:00:00"
+      },
+      "metadata": {},
+      "conditions": "@sys-date.length > 1",
+      "dialog_node": "node_17_1547372837094",
+      "previous_sibling": "node_16_1547372837094"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Here is your summary income report for <? @sys-date.reformatDateTime('MMM dd, yyyy') ?>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_12_1547372837093",
+      "context": {
+        "action": "REPORT_INCOME",
+        "end_date": "@sys-date 23:59:59",
+        "start_date": "@sys-date 00:00:00"
+      },
+      "metadata": {},
+      "conditions": "@sys-date.length == 1",
+      "dialog_node": "node_16_1547372837094",
+      "previous_sibling": "node_9_1547564280001"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_12_1547372837093",
+      "metadata": {},
+      "variable": "$start_date",
+      "dialog_node": "slot_13_1547372837094",
+      "previous_sibling": "node_17_1547372837094"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Sorry, please enter a past date or the date today."
+              },
+              {
+                "text": "Would you like to try again?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "title": "",
+            "options": [
+              {
+                "label": "Yes, show my income report",
+                "value": {
+                  "input": {
+                    "text": "Yes, show my income report"
+                  }
+                }
+              },
+              {
+                "label": "No, I want to do something else.",
+                "value": {
+                  "input": {
+                    "text": "No, I want to do something else."
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_12_1547372837093",
+      "context": {
+        "action": "START_OVER",
+        "end_date": null,
+        "start_date": null
+      },
+      "metadata": {},
+      "conditions": "@sys-date > now() || @sys-date[1] > now()",
+      "dialog_node": "node_9_1547564280001"
+    },
+    {
+      "type": "folder",
+      "title": "Savings Goal",
+      "parent": "node_1_1547089893374",
+      "metadata": {},
+      "dialog_node": "node_9_1547482712624",
+      "previous_sibling": "node_8_1547482600407"
+    },
+    {
+      "type": "folder",
+      "title": "Income",
+      "parent": "node_1_1547089893374",
+      "metadata": {},
+      "dialog_node": "node_8_1547482600407",
+      "previous_sibling": "node_7_1547482537246"
+    },
+    {
+      "type": "folder",
+      "title": "Budgets",
+      "parent": "node_1_1547089893374",
+      "metadata": {},
+      "dialog_node": "node_30_1547486923146",
+      "previous_sibling": "node_9_1547482712624"
+    },
+    {
+      "type": "folder",
+      "title": "Expenses",
+      "parent": "node_1_1547089893374",
+      "metadata": {},
+      "dialog_node": "node_7_1547482537246"
+    },
+    {
+      "type": "standard",
+      "output": {},
+      "parent": "node_2_1547355540512",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@module && !#Add_Expense && !#New_Savings_Goal && !#Add_Income && !#List_Expenses && !#List_Income && !#Report_Expense && !#List_Budget_Transactions && !#List_Savings && !#New_Budget && !#Add_to_Savings && !#List_Budget_Transactions && !#Add_to_Budget && !#Report_Income && !#Report_Savings && !#Report_Budget && !#Overwrite_Savings_Goal && !#Keep_Savings_Goal && !#Overwrite_Budget && !#Keep_Budget && !#Add_to_Budget && !#Report_Savings",
+      "dialog_node": "node_3_1547355581631",
+      "digress_out": "allow_all",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {},
+      "parent": "node_2_1547355540512",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "welcome || $action",
+      "dialog_node": "Welcome",
+      "digress_out": "allow_all"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "What do you want to do next?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1547444629059",
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_5_1547453278433"
+      },
+      "conditions": "@reject",
+      "dialog_node": "node_2_1547447588410",
+      "previous_sibling": "node_1_1547447581455"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Let's get started! "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1547444629059",
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_5_1547444923593"
+      },
+      "conditions": "@accept",
+      "dialog_node": "node_1_1547447581455"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1546997008084",
+      "metadata": {},
+      "variable": "$number",
+      "dialog_node": "slot_2_1546997095179"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_74_1547489047621",
+      "metadata": {},
+      "variable": "$end_date",
+      "dialog_node": "slot_78_1547489047621",
+      "previous_sibling": "slot_75_1547489047621"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Here are your expense transactions from <? @sys-date[0].reformatDateTime('MMM dd, yyyy') ?> to <? @sys-date[1].reformatDateTime('MMM dd, yyyy') ?>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_74_1547489047621",
+      "context": {
+        "action": "REPORT_EXPENSE",
+        "end_date": "@sys-date[1] 23:59:59",
+        "start_date": "@sys-date[0] 00:00:00"
+      },
+      "metadata": {},
+      "conditions": "@sys-date.length > 1",
+      "dialog_node": "node_83_1547489047621",
+      "previous_sibling": "node_82_1547489047621"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_74_1547489047621",
+      "metadata": {},
+      "variable": "$start_date",
+      "dialog_node": "slot_75_1547489047621",
+      "previous_sibling": "node_83_1547489047621"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Here is your summary expense report from @sys-date to <? now().reformatDateTime('MMM dd, yyyy') ?>:"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_74_1547489047621",
+      "context": {
+        "action": "REPORT_EXPENSE",
+        "end_date": "<? now() ?> ",
+        "start_date": "@sys-date 00:00:00"
+      },
+      "metadata": {},
+      "conditions": "@sys-date.length == 1",
+      "dialog_node": "node_82_1547489047621",
+      "previous_sibling": "node_81_1547489047621"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Sorry, please enter a past date or the date today."
+              },
+              {
+                "text": "Would you like to try again?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "title": "",
+            "options": [
+              {
+                "label": "Yes, please list my expenses",
+                "value": {
+                  "input": {
+                    "text": "Yes, please list my expenses"
+                  }
+                }
+              },
+              {
+                "label": "No, I want to do something else.",
+                "value": {
+                  "input": {
+                    "text": "No, I want to do something else."
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_74_1547489047621",
+      "context": {
+        "action": "START_OVER",
+        "end_date": null,
+        "start_date": null
+      },
+      "metadata": {},
+      "conditions": "@sys-date > now() || @sys-date[1] > now()",
+      "dialog_node": "node_81_1547489047621"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": "Please enter the earliest date you'd like to view your transactions, or a range of dates"
+      },
+      "parent": "slot_18_1547486707899",
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_20_1547486707899",
+      "previous_sibling": "handler_19_1547486707899"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_18_1547486707899",
+      "context": {
+        "start_date": "@sys-date[0]"
+      },
+      "metadata": {},
+      "conditions": "@sys-date[0]",
+      "event_name": "input",
+      "dialog_node": "handler_19_1547486707899"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_47_1546510731956",
+      "metadata": {},
+      "variable": "$start_date",
+      "dialog_node": "slot_54_1547365790488",
+      "previous_sibling": "node_1_1547701786567"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Alright, I'm keeping your old savings goal. You can add to the current goal instead."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_47_1546510731956",
+      "metadata": {},
+      "conditions": "#Keep_Savings_Goal",
+      "dialog_node": "node_24_1547764146284",
+      "previous_sibling": "node_15_1547716147903"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_47_1546510731956",
+      "metadata": {},
+      "variable": "$end_date",
+      "dialog_node": "slot_57_1547366111945",
+      "previous_sibling": "node_24_1547764146284"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_47_1546510731956",
+      "metadata": {},
+      "variable": "$amount",
+      "dialog_node": "slot_52_1546510763096",
+      "previous_sibling": "node_2_1547456551218"
+    },
+    {
+      "type": "standard",
+      "title": "Capture $end_date",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_47_1546510731956",
+      "context": {
+        "action": "NEW_SAVINGS",
+        "end_date": "@sys-date"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_1_1547701786567"
+      },
+      "conditions": "@sys-date",
+      "dialog_node": "node_35_1547364848896",
+      "previous_sibling": "node_34_1547364636152"
+    },
+    {
+      "type": "standard",
+      "output": {},
+      "parent": "node_47_1546510731956",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1546827563316"
+      },
+      "conditions": "$start_date && $end_date && $amount || $savings",
+      "dialog_node": "node_1_1547701786567",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_35_1547364848896"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Alright, I'll overwrite your old savings goal to $amount"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_47_1546510731956",
+      "context": {
+        "action": "UPDATE_SAVINGS"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1546827563316"
+      },
+      "conditions": "#Overwrite_Savings_Goal",
+      "dialog_node": "node_15_1547716147903",
+      "previous_sibling": "slot_54_1547365790488"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_47_1546510731956",
+      "context": {
+        "action": "NEW_SAVINGS",
+        "end_date": "@sys-date 23:59:59",
+        "start_date": "<? now() ?>",
+        "description": "<? input.text ?>"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_1_1547701786567"
+      },
+      "conditions": "@sys-date.length == 1",
+      "dialog_node": "node_2_1547456551218",
+      "previous_sibling": "slot_57_1547366111945"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "When does the savings goal start?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_47_1546510731956",
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_34_1547364636152"
+      },
+      "conditions": "!$start_date",
+      "dialog_node": "node_7_1546939945401",
+      "previous_sibling": "slot_52_1546510763096"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "When does the savings goal end?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_47_1546510731956",
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_35_1547364848896"
+      },
+      "conditions": "!$end_date",
+      "dialog_node": "node_6_1547459470371",
+      "previous_sibling": "node_7_1546939945401"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_47_1546510731956",
+      "context": {
+        "action": "NEW_SAVINGS",
+        "description": "<? input.text ?>"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_1_1547701786567"
+      },
+      "conditions": "$start_date && $end_date",
+      "dialog_node": "node_1_1547456359612",
+      "previous_sibling": "node_6_1547459470371"
+    },
+    {
+      "type": "standard",
+      "title": "Capture $start_date",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "When is the end date of your savings goal?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_47_1546510731956",
+      "context": {
+        "start_date": "@sys-date"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_35_1547364848896"
+      },
+      "conditions": "@sys-date",
+      "dialog_node": "node_34_1547364636152"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": "Please enter the earliest date you'd like to view your transactions, or a range of dates (with year)"
+      },
+      "parent": "slot_75_1547489047621",
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_77_1547489047621",
+      "previous_sibling": "handler_76_1547489047621"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_75_1547489047621",
+      "context": {
+        "start_date": "@sys-date"
+      },
+      "metadata": {},
+      "conditions": "@sys-date",
+      "event_name": "input",
+      "dialog_node": "handler_76_1547489047621"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_24_1547486740235",
+      "metadata": {},
+      "variable": "$start_date",
+      "dialog_node": "slot_25_1547486740235",
+      "previous_sibling": "node_29_1547486740235"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Here are your savings summary report from <? @sys-date[0].reformatDateTime('MMM dd, yyyy') ?> to <? @sys-date[1].reformatDateTime('MMM dd, yyyy') ?>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_24_1547486740235",
+      "context": {
+        "action": "REPORT_SAVINGS",
+        "end_date": "@sys-date[1] 23:59:59",
+        "start_date": "@sys-date[0] 00:00:00"
+      },
+      "metadata": {},
+      "conditions": "@sys-date.length > 1",
+      "dialog_node": "node_29_1547486740235",
+      "previous_sibling": "node_28_1547486740235"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Here is your savings summary report for <? @sys-date.reformatDateTime('MMM dd, yyyy') ?>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_24_1547486740235",
+      "context": {
+        "action": "REPORT_SAVINGS",
+        "end_date": "@sys-date 23:59:59",
+        "start_date": "@sys-date 00:00:00"
+      },
+      "metadata": {},
+      "conditions": "@sys-date.length == 1",
+      "dialog_node": "node_28_1547486740235",
+      "previous_sibling": "node_8_1547563934034"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Sorry, please enter a past date or the date today."
+              },
+              {
+                "text": "Would you like to try again?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "title": "",
+            "options": [
+              {
+                "label": "Yes, show my income report",
+                "value": {
+                  "input": {
+                    "text": "Yes, show my income report"
+                  }
+                }
+              },
+              {
+                "label": "No, I want to do something else.",
+                "value": {
+                  "input": {
+                    "text": "No, I want to do something else."
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_24_1547486740235",
+      "context": {
+        "action": "START_OVER",
+        "end_date": null,
+        "start_date": null
+      },
+      "metadata": {},
+      "conditions": "@sys-date > now() || @sys-date[1] > now()",
+      "dialog_node": "node_8_1547563934034"
+    },
+    {
+      "type": "standard",
+      "output": {},
+      "parent": "node_3_1547444440599",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@accept || @reject",
+      "dialog_node": "node_4_1547444629059",
+      "digress_out": "allow_all"
+    },
+    {
+      "type": "frame",
+      "output": {},
+      "parent": "node_30_1547486923146",
+      "metadata": {
+        "fallback": "leave",
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1546827563316"
+      },
+      "conditions": "#Report_Budget",
+      "dialog_node": "node_58_1547486923146",
+      "previous_sibling": "node_51_1547486923146"
+    },
+    {
+      "type": "frame",
+      "output": {},
+      "parent": "node_30_1547486923146",
+      "metadata": {
+        "fallback": "leave",
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1546827563316"
+      },
+      "conditions": "#List_Budget_Transactions",
+      "dialog_node": "node_51_1547486923146",
+      "previous_sibling": "node_1_1547762832981"
+    },
+    {
+      "type": "frame",
+      "output": {},
+      "parent": "node_30_1547486923146",
+      "metadata": {
+        "fallback": "leave",
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1546827563316"
+      },
+      "conditions": "#New_Budget",
+      "dialog_node": "node_1_1547762832981",
+      "digress_out": "allow_all",
+      "digress_out_slots": "allow_all"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "What do you want to manage in your savings?",
+            "options": [
+              {
+                "label": "Add a new savings goal",
+                "value": {
+                  "input": {
+                    "text": "Add new savings goal"
+                  }
+                }
+              },
+              {
+                "label": "Add to savings goal",
+                "value": {
+                  "input": {
+                    "text": "Add to savings goal"
+                  }
+                }
+              },
+              {
+                "label": "List transactions in savings goal",
+                "value": {
+                  "input": {
+                    "text": "List transactions in savings goal"
+                  }
+                }
+              },
+              {
+                "label": "View savings report",
+                "value": {
+                  "input": {
+                    "text": "View savings report"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_3_1547355581631",
+      "metadata": {},
+      "conditions": "@module == \"Savings Goal\"",
+      "dialog_node": "node_6_1547356898921",
+      "previous_sibling": "node_5_1547356032272"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "What do you want to manage in your budget?",
+            "options": [
+              {
+                "label": "Add new budget",
+                "value": {
+                  "input": {
+                    "text": "Add new budget"
+                  }
+                }
+              },
+              {
+                "label": "View budget transactions",
+                "value": {
+                  "input": {
+                    "text": "View budget transactions"
+                  }
+                }
+              },
+              {
+                "label": "View budget report",
+                "value": {
+                  "input": {
+                    "text": "View budget report"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_3_1547355581631",
+      "metadata": {},
+      "conditions": "@module == \"Budget\"",
+      "dialog_node": "node_7_1547357404001",
+      "previous_sibling": "node_6_1547356898921"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "What do you want to manage in your income?",
+            "options": [
+              {
+                "label": "Add income",
+                "value": {
+                  "input": {
+                    "text": "Add income"
+                  }
+                }
+              },
+              {
+                "label": "List income transactions",
+                "value": {
+                  "input": {
+                    "text": "List income transactions"
+                  }
+                }
+              },
+              {
+                "label": "View income report",
+                "value": {
+                  "input": {
+                    "text": "View income report"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_3_1547355581631",
+      "metadata": {},
+      "conditions": "@module == \"Income\"",
+      "dialog_node": "node_5_1547356032272",
+      "previous_sibling": "node_4_1547355622832"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "What do want to manage in your expense?",
+            "options": [
+              {
+                "label": "Add expense record",
+                "value": {
+                  "input": {
+                    "text": "Add expense record"
+                  }
+                }
+              },
+              {
+                "label": "View expense transactions",
+                "value": {
+                  "input": {
+                    "text": "View expense transaction"
+                  }
+                }
+              },
+              {
+                "label": "View expense report",
+                "value": {
+                  "input": {
+                    "text": "View expense report"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_3_1547355581631",
+      "metadata": {},
+      "conditions": "@module == \"Expense\"",
+      "dialog_node": "node_4_1547355622832"
+    },
+    {
+      "type": "standard",
+      "title": "Add_Income action",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1547175134818",
+      "context": {
+        "action": "ADD_INCOME",
+        "number": "@sys-number",
+        "category": "@food@transportation@utilities@general@luxuries"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "Welcome"
+      },
+      "dialog_node": "node_42_1547173614380",
+      "previous_sibling": "node_13_1547173140944"
+    },
+    {
+      "type": "standard",
+      "title": "Add_Expense action",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1547175134818",
+      "context": {
+        "action": "ADD_EXPENSE",
+        "number": "@sys-number",
+        "category": "@food@transportation@utilities@general@luxuries"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "Welcome"
+      },
+      "dialog_node": "node_13_1547173140944"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Here are your transactions for <? @sys-date.reformatDateTime('MMM dd, yyyy') ?>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_51_1547486923146",
+      "context": {
+        "action": "VIEW_BUDGET",
+        "end_date": "@sys-date 23:59:59",
+        "start_date": "@sys-date 00:00:00"
+      },
+      "metadata": {},
+      "conditions": "@sys-date.length == 1",
+      "dialog_node": "node_56_1547486923146",
+      "previous_sibling": "node_55_1547486923146"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Here are your transactions from <? @sys-date[0].reformatDateTime('MMM dd, yyyy') ?> to <? @sys-date[1].reformatDateTime('MMM dd, yyyy') ?>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_51_1547486923146",
+      "context": {
+        "action": "VIEW_BUDGET",
+        "end_date": "@sys-date[1] 23:59:59",
+        "start_date": "@sys-date[0] 00:00:00"
+      },
+      "metadata": {},
+      "conditions": "@sys-date.length > 1",
+      "dialog_node": "node_57_1547486923146",
+      "previous_sibling": "node_56_1547486923146"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_51_1547486923146",
+      "metadata": {},
+      "variable": "$start_date",
+      "dialog_node": "slot_52_1547486923146",
+      "previous_sibling": "node_57_1547486923146"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Sorry, please enter a past date or the date today."
+              },
+              {
+                "text": "Would you like to try again?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "title": "",
+            "options": [
+              {
+                "label": "Yes, please list my income",
+                "value": {
+                  "input": {
+                    "text": "Yes, please list my income"
+                  }
+                }
+              },
+              {
+                "label": "No, I want to do something else.",
+                "value": {
+                  "input": {
+                    "text": "No, I want to do something else."
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_51_1547486923146",
+      "context": {
+        "end_date": null,
+        "start_date": null
+      },
+      "metadata": {},
+      "conditions": "@sys-date > now() || @sys-date[0] > now() || @sys-date[1] > now()",
+      "dialog_node": "node_55_1547486923146"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_18_1547461559194",
+      "event_name": "focus",
+      "dialog_node": "handler_20_1547461559194",
+      "previous_sibling": "handler_19_1547461559194"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_18_1547461559194",
+      "event_name": "input",
+      "dialog_node": "handler_19_1547461559194"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_65_1547368207754",
+      "context": {
+        "start_date": "@sys-date"
+      },
+      "metadata": {},
+      "conditions": "@sys-date",
+      "event_name": "input",
+      "dialog_node": "handler_66_1547368207754",
+      "previous_sibling": "handler_67_1547368207754"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": "Please enter the earliest date you'd like to view your transactions, or a range of dates (with year)"
+      },
+      "parent": "slot_65_1547368207754",
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_67_1547368207754"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_54_1547365790488",
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_56_1547365790488",
+      "previous_sibling": "handler_55_1547365790488"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_54_1547365790488",
+      "context": {
+        "start_date": "@sys-date"
+      },
+      "metadata": {},
+      "conditions": "@sys-date",
+      "event_name": "input",
+      "dialog_node": "handler_55_1547365790488"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_1_1546829529991",
+      "context": {
+        "action": null,
+        "amount": null,
+        "number": null,
+        "category": null,
+        "end_date": null,
+        "start_date": null,
+        "description": null
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_5_1547453278433"
+      },
+      "conditions": "@accept",
+      "dialog_node": "node_36_1547437449909",
+      "previous_sibling": "slot_18_1547461559194"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Alright. See you soon!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1546829529991",
+      "context": {
+        "action": null,
+        "amount": null,
+        "number": null,
+        "category": null,
+        "end_date": null,
+        "start_date": null,
+        "description": null
+      },
+      "metadata": {},
+      "conditions": "@reject",
+      "dialog_node": "node_52_1547438921913",
+      "previous_sibling": "node_36_1547437449909"
+    },
+    {
+      "type": "slot",
+      "parent": "node_1_1546829529991",
+      "dialog_node": "slot_18_1547461559194"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_46_1547365195264",
+      "event_name": "focus",
+      "dialog_node": "handler_48_1547365195264",
+      "previous_sibling": "handler_47_1547365195264"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_46_1547365195264",
+      "context": {
+        "category": "@luxuries"
+      },
+      "metadata": {},
+      "conditions": "@luxuries",
+      "event_name": "input",
+      "dialog_node": "handler_47_1547365195264"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I recorded that you spent $amount on $category expenses"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_75_1546851761521",
+      "context": {
+        "action": "ADD_EXPENSE",
+        "amount": "$amount",
+        "category": "@food@transportation@utilities@general@luxuries",
+        "description": "$amount on $category"
+      },
+      "disabled": true,
+      "metadata": {},
+      "conditions": "@transportation",
+      "dialog_node": "node_32_1547364433926"
+    },
+    {
+      "type": "frame",
+      "output": {},
+      "parent": "node_8_1547482600407",
+      "metadata": {
+        "fallback": "leave",
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1546827563316"
+      },
+      "conditions": "#Report_Income",
+      "dialog_node": "node_12_1547372837093",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_69_1547370287693",
+      "digress_out_slots": "not_allowed"
+    },
+    {
+      "type": "frame",
+      "output": {},
+      "parent": "node_8_1547482600407",
+      "metadata": {
+        "fallback": "leave",
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1546827563316"
+      },
+      "conditions": "#List_Income",
+      "dialog_node": "node_69_1547370287693",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_5_1546935320113",
+      "digress_out_slots": "not_allowed"
+    },
+    {
+      "type": "frame",
+      "output": {},
+      "parent": "node_8_1547482600407",
+      "metadata": {
+        "fallback": "leave",
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1546827563316"
+      },
+      "conditions": "#Add_Income",
+      "dialog_node": "node_5_1546935320113",
+      "digress_out": "allow_all",
+      "digress_out_slots": "allow_all"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_57_1547366111945",
+      "context": {
+        "end_date": "@sys-date"
+      },
+      "metadata": {},
+      "conditions": "@sys-date",
+      "event_name": "input",
+      "dialog_node": "handler_58_1547366111945",
+      "previous_sibling": "handler_59_1547366111945"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_57_1547366111945",
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_59_1547366111945"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_58_1547486923146",
+      "metadata": {},
+      "variable": "$start_date",
+      "dialog_node": "slot_59_1547486923146",
+      "previous_sibling": "node_63_1547486923146"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Here is your summary budget report from <? @sys-date[0].reformatDateTime('MMM dd, yyyy') ?> to <? @sys-date[1].reformatDateTime('MMM dd, yyyy') ?>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_58_1547486923146",
+      "context": {
+        "action": "REPORT_BUDGET",
+        "end_date": "@sys-date[1] 23:59:59",
+        "start_date": "@sys-date[0] 00:00:00"
+      },
+      "metadata": {},
+      "conditions": "@sys-date.length > 1",
+      "dialog_node": "node_63_1547486923146",
+      "previous_sibling": "node_62_1547486923146"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Here is your summary budget report for <? @sys-date.reformatDateTime('MMM dd, yyyy') ?>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_58_1547486923146",
+      "context": {
+        "action": "REPORT_BUDGET",
+        "end_date": "@sys-date 23:59:59",
+        "start_date": "@sys-date 00:00:00"
+      },
+      "metadata": {},
+      "conditions": "@sys-date.length == 1",
+      "dialog_node": "node_62_1547486923146",
+      "previous_sibling": "node_7_1547563710486"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Sorry, please enter a past date or the date today."
+              },
+              {
+                "text": "Would you like to try again?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "title": "",
+            "options": [
+              {
+                "label": "Yes, show my budget report",
+                "value": {
+                  "input": {
+                    "text": "Yes, show my budget report"
+                  }
+                }
+              },
+              {
+                "label": "No, I want to do something else.",
+                "value": {
+                  "input": {
+                    "text": "No, I want to do something else."
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_58_1547486923146",
+      "context": {
+        "action": "START_OVER",
+        "end_date": null,
+        "start_date": null
+      },
+      "metadata": {},
+      "conditions": "@sys-date > now() || @sys-date[1] > now()",
+      "dialog_node": "node_7_1547563710486"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_37_1547365155359",
+      "event_name": "focus",
+      "dialog_node": "handler_39_1547365155359",
+      "previous_sibling": "handler_38_1547365155359"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_37_1547365155359",
+      "context": {
+        "category": "@food"
+      },
+      "metadata": {},
+      "conditions": "@food",
+      "event_name": "input",
+      "dialog_node": "handler_38_1547365155359"
+    },
+    {
+      "type": "frame",
+      "output": {},
+      "parent": "node_7_1547482537246",
+      "metadata": {
+        "fallback": "leave",
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1546827563316"
+      },
+      "conditions": "#Report_Expense",
+      "dialog_node": "node_74_1547489047621",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_60_1547367224938",
+      "digress_out_slots": "allow_all"
+    },
+    {
+      "type": "frame",
+      "output": {},
+      "parent": "node_7_1547482537246",
+      "metadata": {
+        "fallback": "leave",
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1546827563316"
+      },
+      "conditions": "#List_Expenses",
+      "dialog_node": "node_60_1547367224938",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_12_1546573939551",
+      "digress_out_slots": "allow_all"
+    },
+    {
+      "type": "frame",
+      "output": {},
+      "parent": "node_7_1547482537246",
+      "metadata": {
+        "fallback": "leave",
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#Add_Expense",
+      "dialog_node": "node_12_1546573939551",
+      "digress_out": "allow_all",
+      "digress_out_slots": "allow_all"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_69_1547370287693",
+      "metadata": {},
+      "variable": "$start_date",
+      "dialog_node": "slot_70_1547370288223",
+      "previous_sibling": "node_74_1547370288223"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Here are your income transactions from <? @sys-date[0].reformatDateTime('MMM dd, yyyy') ?> to <? @sys-date[1].reformatDateTime('MMM dd, yyyy') ?>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_69_1547370287693",
+      "context": {
+        "action": "VIEW_INCOME",
+        "end_date": "@sys-date[1] 23:59:59",
+        "start_date": "@sys-date[0] 00:00:00"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1546827563316"
+      },
+      "conditions": "@sys-date.length > 1",
+      "dialog_node": "node_74_1547370288223",
+      "previous_sibling": "node_73_1547370288223"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Here are your income transactions for <? @sys-date.reformatDateTime('MMM dd, yyyy') ?>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_69_1547370287693",
+      "context": {
+        "action": "VIEW_INCOME",
+        "end_date": "@sys-date 23:59:59",
+        "start_date": "@sys-date 00:00:00"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1546827563316"
+      },
+      "conditions": "@sys-date.length == 1",
+      "dialog_node": "node_73_1547370288223",
+      "previous_sibling": "node_9_1547431782955"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Sorry, please enter a past date or the date today."
+              },
+              {
+                "text": "Would you like to try again?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "title": "",
+            "options": [
+              {
+                "label": "Yes, please list my income",
+                "value": {
+                  "input": {
+                    "text": "Yes, please list my income"
+                  }
+                }
+              },
+              {
+                "label": "No, I want to do something else.",
+                "value": {
+                  "input": {
+                    "text": "No, I want to do something else."
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_69_1547370287693",
+      "context": {
+        "end_date": null,
+        "start_date": null
+      },
+      "metadata": {},
+      "conditions": "@sys-date > now() || @sys-date[0] > now() || @sys-date[1] > now()",
+      "dialog_node": "node_9_1547431782955"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "What do you want to manage today?",
+            "options": [
+              {
+                "label": "Expense",
+                "value": {
+                  "input": {
+                    "text": "Expense"
+                  }
+                }
+              },
+              {
+                "label": "Income",
+                "value": {
+                  "input": {
+                    "text": "Income"
+                  }
+                }
+              },
+              {
+                "label": "Savings Goal",
+                "value": {
+                  "input": {
+                    "text": "Savings Goal"
+                  }
+                }
+              },
+              {
+                "label": "Budget",
+                "value": {
+                  "input": {
+                    "text": "Budget"
+                  }
+                }
+              }
+            ],
+            "description": "",
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_5_1547453278433",
+      "context": {
+        "action": null,
+        "amount": null,
+        "number": null,
+        "category": null,
+        "end_date": null,
+        "start_date": null,
+        "description": null
+      },
+      "disabled": true,
+      "metadata": {},
+      "conditions": "!$action",
+      "dialog_node": "node_7_1547453278433",
+      "previous_sibling": "node_6_1547453278433"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "What do you want to manage next?",
+            "options": [
+              {
+                "label": "Expense",
+                "value": {
+                  "input": {
+                    "text": "Expense"
+                  }
+                }
+              },
+              {
+                "label": "Income",
+                "value": {
+                  "input": {
+                    "text": "Income"
+                  }
+                }
+              },
+              {
+                "label": "Savings Goal",
+                "value": {
+                  "input": {
+                    "text": "Savings Goal"
+                  }
+                }
+              },
+              {
+                "label": "Budget",
+                "value": {
+                  "input": {
+                    "text": "Budget"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_5_1547453278433",
+      "context": {
+        "action": null,
+        "amount": null,
+        "number": null,
+        "category": null,
+        "end_date": null,
+        "start_date": null,
+        "description": null
+      },
+      "disabled": true,
+      "metadata": {},
+      "conditions": "$action",
+      "dialog_node": "node_6_1547453278433"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_40_1547365175776",
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_42_1547365175776",
+      "previous_sibling": "handler_41_1547365175776"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_40_1547365175776",
+      "context": {
+        "category": "@transportation"
+      },
+      "metadata": {},
+      "conditions": "@transportation",
+      "event_name": "input",
+      "dialog_node": "handler_41_1547365175776"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "What do you want to manage next?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "title": "Action Type",
+            "options": [
+              {
+                "label": "Expense",
+                "value": {
+                  "input": {
+                    "text": "Expense"
+                  }
+                }
+              },
+              {
+                "label": "Income",
+                "value": {
+                  "input": {
+                    "text": "Income"
+                  }
+                }
+              },
+              {
+                "label": "Savings Goal",
+                "value": {
+                  "input": {
+                    "text": "Savings Goal"
+                  }
+                }
+              },
+              {
+                "label": "Budget",
+                "value": {
+                  "input": {
+                    "text": "Budget"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "Welcome",
+      "context": {
+        "action": null,
+        "amount": null,
+        "number": null,
+        "category": null,
+        "end_date": null,
+        "start_date": null,
+        "description": null
+      },
+      "metadata": {},
+      "conditions": "$action",
+      "dialog_node": "node_3_1546571099739",
+      "previous_sibling": "node_5_1547453278433"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hi <? context.user ?>, I'm Sabrina! You can call me Sab."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "What do you want to manage today?",
+            "options": [
+              {
+                "label": "Expense",
+                "value": {
+                  "input": {
+                    "text": "Expense"
+                  }
+                }
+              },
+              {
+                "label": "Income",
+                "value": {
+                  "input": {
+                    "text": "Income"
+                  }
+                }
+              },
+              {
+                "label": "Savings Goal",
+                "value": {
+                  "input": {
+                    "text": "Savings Goal"
+                  }
+                }
+              },
+              {
+                "label": "Budget",
+                "value": {
+                  "input": {
+                    "text": "Budget"
+                  }
+                }
+              }
+            ],
+            "description": "",
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "Welcome",
+      "context": {
+        "action": null,
+        "amount": null,
+        "number": null,
+        "category": null,
+        "end_date": null,
+        "start_date": null,
+        "description": null
+      },
+      "metadata": {},
+      "conditions": "!$action",
+      "dialog_node": "node_1_1547354153510",
+      "previous_sibling": "node_3_1546571099739"
+    },
+    {
+      "type": "standard",
+      "title": "Start Over",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "What do you want to manage next?",
+            "options": [
+              {
+                "label": "Expense",
+                "value": {
+                  "input": {
+                    "text": "Expense"
+                  }
+                }
+              },
+              {
+                "label": "Income",
+                "value": {
+                  "input": {
+                    "text": "Income"
+                  }
+                }
+              },
+              {
+                "label": "Savings Goal",
+                "value": {
+                  "input": {
+                    "text": "Savings Goal"
+                  }
+                }
+              },
+              {
+                "label": "Budget",
+                "value": {
+                  "input": {
+                    "text": "Budget"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "Welcome",
+      "context": {
+        "action": null,
+        "amount": null,
+        "number": null,
+        "category": null,
+        "end_date": null,
+        "start_date": null,
+        "description": null
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "welcome || $action",
+      "dialog_node": "node_5_1547453278433",
+      "digress_out": "allow_all"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Alright, I'm keeping your old budget. It's continuing to track your expenses."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1547762832981",
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1546827563316"
+      },
+      "conditions": "#Keep_Budget",
+      "dialog_node": "node_23_1547763344468",
+      "previous_sibling": "node_7_1547762832986"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Until when will I track your budget?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1547762832981",
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_3_1547762832986"
+      },
+      "conditions": "!$end_date",
+      "dialog_node": "node_19_1547762832986",
+      "previous_sibling": "node_18_1547762832986"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "When will I start tracking your budget?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1547762832981",
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_2_1547762832986"
+      },
+      "conditions": "!$start_date",
+      "dialog_node": "node_18_1547762832986",
+      "previous_sibling": "slot_14_1547762832986"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1547762832981",
+      "metadata": {},
+      "variable": "$start_date",
+      "dialog_node": "slot_8_1547762832986",
+      "previous_sibling": "node_4_1547762832986"
+    },
+    {
+      "type": "standard",
+      "output": {},
+      "parent": "node_1_1547762832981",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1546827563316"
+      },
+      "conditions": "$start_date && $end_date && $amount || $budget",
+      "dialog_node": "node_4_1547762832986",
+      "previous_sibling": "node_3_1547762832986"
+    },
+    {
+      "type": "standard",
+      "title": "Capture $end_date",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_1_1547762832981",
+      "context": {
+        "action": "NEW_BUDGET",
+        "end_date": "@sys-date"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_4_1547762832986"
+      },
+      "conditions": "@sys-date",
+      "dialog_node": "node_3_1547762832986",
+      "previous_sibling": "node_2_1547762832986"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_1_1547762832981",
+      "context": {
+        "action": "NEW_SAVINGS",
+        "end_date": "@sys-date 23:59:59",
+        "description": "<? input.text ?>"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_4_1547762832986"
+      },
+      "conditions": "$start_date && $end_date",
+      "dialog_node": "node_20_1547762832986",
+      "previous_sibling": "node_19_1547762832986"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1547762832981",
+      "metadata": {},
+      "variable": "$amount",
+      "dialog_node": "slot_14_1547762832986",
+      "previous_sibling": "node_17_1547762832986"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Alright, I'll overwrite your old budget goal to $amount"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1547762832981",
+      "context": {
+        "action": "UPDATE_BUDGET"
+      },
+      "metadata": {},
+      "conditions": "#Overwrite_Budget",
+      "dialog_node": "node_7_1547762832986",
+      "previous_sibling": "slot_8_1547762832986"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_1_1547762832981",
+      "metadata": {},
+      "variable": "$end_date",
+      "dialog_node": "slot_11_1547762832986",
+      "previous_sibling": "node_23_1547763344468"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": []
+      },
+      "parent": "node_1_1547762832981",
+      "context": {
+        "action": "NEW_BUDGET",
+        "end_date": "@sys-date 23:59:59",
+        "start_date": "<? now() ?>",
+        "description": "<? input.text ?>"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_4_1547762832986"
+      },
+      "conditions": "@sys-date.length == 1",
+      "dialog_node": "node_17_1547762832986",
+      "previous_sibling": "slot_11_1547762832986"
+    },
+    {
+      "type": "standard",
+      "title": "Capture $start_date",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Until when will I track your budget?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1547762832981",
+      "context": {
+        "start_date": "@sys-date"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_3_1547762832986"
+      },
+      "conditions": "@sys-date",
+      "dialog_node": "node_2_1547762832986"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": "Please enter a start date and/or an end date"
+      },
+      "parent": "slot_25_1547486740235",
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_27_1547486740235",
+      "previous_sibling": "handler_26_1547486740235"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_25_1547486740235",
+      "context": {
+        "start_date": "@sys-date[0]"
+      },
+      "metadata": {},
+      "conditions": "@sys-date[0]",
+      "event_name": "input",
+      "dialog_node": "handler_26_1547486740235"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_14_1547762832986",
+      "context": {
+        "amount": "@sys-number"
+      },
+      "metadata": {},
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_16_1547762832986",
+      "previous_sibling": "handler_15_1547762832986"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": "How much is your budget?"
+      },
+      "parent": "slot_14_1547762832986",
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_15_1547762832986"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": "Please enter the earliest date you'd like to view your transactions, or a range of dates"
+      },
+      "parent": "slot_70_1547370288223",
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_72_1547370288223",
+      "previous_sibling": "handler_71_1547370288223"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_70_1547370288223",
+      "context": {
+        "start_date": "@sys-date[0]"
+      },
+      "metadata": {},
+      "conditions": "@sys-date[0]",
+      "event_name": "input",
+      "dialog_node": "handler_71_1547370288223"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hi, I'm now tracking that you want to budget $amount from <?$start_date.reformatDateTime('MMM dd, yyyy')?> to <?$end_date.reformatDateTime('MMM dd, yyyy')?>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1547762832986",
+      "metadata": {},
+      "conditions": "!$budget",
+      "dialog_node": "node_6_1547762832986",
+      "previous_sibling": "node_5_1547762832986"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "You seem to have already made a budget with the same date range."
+              },
+              {
+                "text": "Do you want to overwrite your old budget amounting to $budget.goal_amount with this new goal, or keep the old budget?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "title": "",
+            "options": [
+              {
+                "label": "Overwrite my old budget",
+                "value": {
+                  "input": {
+                    "text": "Overwrite my old budget"
+                  }
+                }
+              },
+              {
+                "label": "Keep current budget",
+                "value": {
+                  "input": {
+                    "text": "Keep current budget"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_4_1547762832986",
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_7_1547762832986"
+      },
+      "conditions": "$budget",
+      "dialog_node": "node_5_1547762832986"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_52_1546510763096",
+      "context": {
+        "amount": "@sys-number"
+      },
+      "metadata": {},
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_53_1546510763096",
+      "previous_sibling": "handler_54_1546510763096"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": "How much do you want to save?"
+      },
+      "parent": "slot_52_1546510763096",
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_54_1546510763096"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I'll respond with:"
+              },
+              {
+                "text": "\"I recorded that you spent $amount on $category.\" Simple and quick, right?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_5_1547444923593",
+      "metadata": {
+        "fallback": "leave"
+      },
+      "conditions": "$user_tutorial && #Add_Expense",
+      "dialog_node": "node_25_1547764665760",
+      "digress_out": "allow_all",
+      "digress_out_slots": "not_allowed"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Awesome! I recorded that you saved $amount on <? $date_created.reformatDateTime('MMM dd, yyyy hh:mm:ss a') ?>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1547482712624",
+      "context": {
+        "action": "ADD_TO_SAVINGS",
+        "date_created": "<? now() ?>"
+      },
+      "metadata": {
+        "fallback": "leave"
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1546827563316"
+      },
+      "conditions": "#Add_to_Savings",
+      "dialog_node": "node_10_1547484530464",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_47_1546510731956",
+      "digress_out_slots": "allow_all"
+    },
+    {
+      "type": "frame",
+      "output": {},
+      "parent": "node_9_1547482712624",
+      "metadata": {
+        "fallback": "leave",
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1546827563316"
+      },
+      "conditions": "#List_Savings",
+      "dialog_node": "node_17_1547486707899",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_10_1547484530464",
+      "digress_out_slots": "not_allowed"
+    },
+    {
+      "type": "frame",
+      "output": {},
+      "parent": "node_9_1547482712624",
+      "metadata": {
+        "fallback": "leave",
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1546827563316"
+      },
+      "conditions": "#Report_Savings",
+      "dialog_node": "node_24_1547486740235",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_17_1547486707899",
+      "digress_out_slots": "not_allowed"
+    },
+    {
+      "type": "frame",
+      "output": {},
+      "parent": "node_9_1547482712624",
+      "metadata": {
+        "fallback": "leave",
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1546827563316"
+      },
+      "conditions": "#New_Savings_Goal",
+      "dialog_node": "node_47_1546510731956",
+      "digress_out": "allow_all",
+      "digress_out_slots": "allow_all"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": "Please enter the earliest date you'd like to view your transactions, or a range of dates"
+      },
+      "parent": "slot_52_1547486923146",
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_54_1547486923146",
+      "previous_sibling": "handler_53_1547486923146"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_52_1547486923146",
+      "context": {
+        "start_date": "@sys-date[0]"
+      },
+      "metadata": {},
+      "conditions": "@sys-date[0]",
+      "event_name": "input",
+      "dialog_node": "handler_53_1547486923146"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1546997095179",
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_4_1546997095179",
+      "previous_sibling": "handler_3_1546997095179"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1546997095179",
+      "context": {
+        "number": "@sys-number"
+      },
+      "metadata": {},
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_3_1546997095179"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_17_1546847532143",
+      "metadata": {},
+      "event_name": "filled",
+      "dialog_node": "handler_21_1546849967952",
+      "previous_sibling": "handler_18_1546847532143"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_17_1546847532143",
+      "context": {
+        "amount": "@sys-number"
+      },
+      "metadata": {},
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_18_1546847532143",
+      "previous_sibling": "handler_19_1546847532143"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": "How much did you spend?"
+      },
+      "parent": "slot_17_1546847532143",
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_19_1546847532143"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_8_1547762832986",
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_10_1547762832986",
+      "previous_sibling": "handler_9_1547762832986"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_8_1547762832986",
+      "context": {
+        "start_date": "@sys-date"
+      },
+      "metadata": {},
+      "conditions": "@sys-date",
+      "event_name": "input",
+      "dialog_node": "handler_9_1547762832986"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_10_1547484530464",
+      "metadata": {},
+      "variable": "$amount",
+      "dialog_node": "slot_11_1547484583985"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_17_1547486707899",
+      "metadata": {},
+      "variable": "$start_date",
+      "dialog_node": "slot_18_1547486707899",
+      "previous_sibling": "node_23_1547486707899"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Here are your income transactions from <? @sys-date[0].reformatDateTime('MMM dd, yyyy') ?> to <? @sys-date[1].reformatDateTime('MMM dd, yyyy') ?>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_17_1547486707899",
+      "context": {
+        "action": "VIEW_SAVINGS",
+        "end_date": "@sys-date[1] 23:59:59",
+        "start_date": "@sys-date[0] 00:00:00"
+      },
+      "metadata": {},
+      "conditions": "@sys-date.length > 1",
+      "dialog_node": "node_23_1547486707899",
+      "previous_sibling": "node_22_1547486707899"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Here are your income transactions for <? @sys-date.reformatDateTime('MMM dd, yyyy') ?>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_17_1547486707899",
+      "context": {
+        "action": "VIEW_SAVINGS",
+        "end_date": "@sys-date 23:59:59",
+        "start_date": "@sys-date 00:00:00"
+      },
+      "metadata": {},
+      "conditions": "@sys-date.length == 1",
+      "dialog_node": "node_22_1547486707899",
+      "previous_sibling": "node_21_1547486707899"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Sorry, please enter a past date or the date today."
+              },
+              {
+                "text": "Would you like to try again?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "title": "",
+            "options": [
+              {
+                "label": "Yes, please list my income",
+                "value": {
+                  "input": {
+                    "text": "Yes, please list my income"
+                  }
+                }
+              },
+              {
+                "label": "No, I want to do something else.",
+                "value": {
+                  "input": {
+                    "text": "No, I want to do something else."
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_17_1547486707899",
+      "context": {
+        "end_date": null,
+        "start_date": null
+      },
+      "metadata": {},
+      "conditions": "@sys-date > now() || @sys-date[0] > now() || @sys-date[1] > now()",
+      "dialog_node": "node_21_1547486707899"
+    },
+    {
+      "type": "standard",
+      "title": "Teaching Add Expense",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "While I may have a helpful start menu for you to manage your finances, I can also teach you ways you can shortcut all of the tasks you want me to do for you!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "title": "For example, type in the sentence:",
+            "options": [
+              {
+                "label": "I ate at Jollibee for 299 pesos",
+                "value": {
+                  "input": {
+                    "text": "I ate at Jollibee for 299 pesos"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_2_1547444226190",
+      "context": {
+        "user_tutorial": true
+      },
+      "metadata": {},
+      "dialog_node": "node_5_1547444923593",
+      "previous_sibling": "node_3_1547444440599"
+    },
+    {
+      "type": "standard",
+      "title": "Confirmation Start Tutorial",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Do you want a user tutorial of my features?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "title": "Do you want a user tutorial of my features?",
+            "options": [
+              {
+                "label": "Yes",
+                "value": {
+                  "input": {
+                    "text": "Yes"
+                  }
+                }
+              },
+              {
+                "label": "No",
+                "value": {
+                  "input": {
+                    "text": "No"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_2_1547444226190",
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "condition",
+        "dialog_node": "node_4_1547444629059"
+      },
+      "conditions": "#User_Tutorial",
+      "dialog_node": "node_3_1547444440599"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_49_1547365206896",
+      "event_name": "focus",
+      "dialog_node": "handler_51_1547365206896",
+      "previous_sibling": "handler_50_1547365206896"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_49_1547365206896",
+      "context": {
+        "category": "@utilities"
+      },
+      "metadata": {},
+      "conditions": "@utilities",
+      "event_name": "input",
+      "dialog_node": "handler_50_1547365206896"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_48_1547438699579",
+      "event_name": "focus",
+      "dialog_node": "handler_50_1547438699579",
+      "previous_sibling": "handler_49_1547438699579"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_48_1547438699579",
+      "event_name": "input",
+      "dialog_node": "handler_49_1547438699579"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_29_1547764798730",
+      "event_name": "focus",
+      "dialog_node": "handler_31_1547764798730",
+      "previous_sibling": "handler_30_1547764798730"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_29_1547764798730",
+      "context": {
+        "category": "@food"
+      },
+      "metadata": {},
+      "conditions": "@food",
+      "event_name": "input",
+      "dialog_node": "handler_30_1547764798730"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello. How can I help you?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "title": "What would you like me to do for you today?",
+            "options": [
+              {
+                "label": "Add Expense",
+                "value": {
+                  "input": {
+                    "text": "#Add_Expense"
+                  }
+                }
+              },
+              {
+                "label": "Add Income",
+                "value": {
+                  "input": {
+                    "text": "#Add_Income"
+                  }
+                }
+              },
+              {
+                "label": "New Savings Goal",
+                "value": {
+                  "input": {
+                    "text": "#New_Savings_Goal"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_1_1547089345224",
+      "disabled": true,
+      "metadata": {},
+      "dialog_node": "node_2_1547089345239"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I recorded that you earned $amount from @income"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1546935320113",
+      "context": {
+        "action": "ADD_INCOME",
+        "number": "@sys-number"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1546827563316"
+      },
+      "conditions": "@income && @income != \"\"",
+      "dialog_node": "node_29_1546935320128",
+      "previous_sibling": "node_28_1546935320128"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_5_1546935320113",
+      "metadata": {},
+      "variable": "$amount",
+      "dialog_node": "slot_23_1546935320128",
+      "previous_sibling": "handler_27_1546935320128"
+    },
+    {
+      "type": "event_handler",
+      "parent": "node_5_1546935320113",
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_27_1546935320128",
+      "previous_sibling": "node_29_1546935320128"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I recorded that you earned $amount"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1546935320113",
+      "context": {
+        "action": "ADD_INCOME",
+        "number": "@sys-number",
+        "description": "<? input.text ?>"
+      },
+      "metadata": {},
+      "conditions": "!@income",
+      "dialog_node": "node_28_1546935320128"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good bye!"
+              },
+              {
+                "text": "Sayonara!"
+              },
+              {
+                "text": "See you soon!"
+              },
+              {
+                "text": "Catch you later!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1547089558095",
+      "metadata": {},
+      "conditions": "#General_Ending",
+      "dialog_node": "node_2_1546438839754",
+      "previous_sibling": "node_1_1546438475215"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1547089558095",
+      "context": {
+        "action": null,
+        "amount": null,
+        "number": null,
+        "category": null,
+        "end_date": null,
+        "start_date": null,
+        "description": null
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_5_1547453278433"
+      },
+      "conditions": "#Bot_Control_Reject_Response",
+      "dialog_node": "node_15_1547433979494",
+      "previous_sibling": "node_3_1546438936282"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thanks. I mean, I DO have awesome creators."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1547089558095",
+      "metadata": {},
+      "conditions": "#General_Positive_Feedback",
+      "dialog_node": "node_3_1546438936282",
+      "previous_sibling": "node_2_1546438839754"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I can help you track whatever you're spending or earning, just tell me!"
+              },
+              {
+                "text": "I can remember what you spent, how much you earned, and remind you where your money is going. "
+              },
+              {
+                "text": "I can also help you track time-based savings goals. "
+              },
+              {
+                "text": "I can also help you track a time-based budget so you would remember to not overspend. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_3_1547089558095",
+      "metadata": {},
+      "conditions": "#General_Agent_Capabilities",
+      "dialog_node": "node_1_1546438475215",
+      "previous_sibling": "node_1_1547089345224"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hi, what do you want to manage?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_3_1547089558095",
+      "context": {
+        "number": null,
+        "category": null
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_5_1547453278433"
+      },
+      "conditions": "#General_Greetings",
+      "dialog_node": "node_1_1547089345224",
+      "digress_out": "allow_all"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_25_1547764665760",
+      "metadata": {},
+      "variable": "$category",
+      "dialog_node": "slot_29_1547764798730",
+      "previous_sibling": "slot_26_1547764782216"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_25_1547764665760",
+      "metadata": {},
+      "variable": "$amount",
+      "dialog_node": "slot_26_1547764782216"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_26_1547764782216",
+      "event_name": "focus",
+      "dialog_node": "handler_28_1547764782216",
+      "previous_sibling": "handler_27_1547764782216"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_26_1547764782216",
+      "context": {
+        "amount": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_27_1547764782216"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_11_1547762832986",
+      "context": {
+        "end_date": "@sys-date"
+      },
+      "metadata": {},
+      "conditions": "@sys-date",
+      "event_name": "input",
+      "dialog_node": "handler_13_1547762832986",
+      "previous_sibling": "handler_12_1547762832986"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_11_1547762832986",
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_12_1547762832986"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_43_1547365187040",
+      "event_name": "focus",
+      "dialog_node": "handler_45_1547365187040",
+      "previous_sibling": "handler_44_1547365187040"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_43_1547365187040",
+      "context": {
+        "category": "@general"
+      },
+      "metadata": {},
+      "conditions": "@general",
+      "event_name": "input",
+      "dialog_node": "handler_44_1547365187040"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": "Please enter a start date and/or an end date"
+      },
+      "parent": "slot_13_1547372837094",
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_15_1547372837094",
+      "previous_sibling": "handler_14_1547372837094"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_13_1547372837094",
+      "context": {
+        "start_date": "@sys-date[0]"
+      },
+      "metadata": {},
+      "conditions": "@sys-date[0]",
+      "event_name": "input",
+      "dialog_node": "handler_14_1547372837094"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_60_1547367224938",
+      "metadata": {},
+      "variable": "$end_date",
+      "dialog_node": "slot_68_1547488419716",
+      "previous_sibling": "slot_65_1547368207754"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Here are your expense transactions from <? @sys-date[0].reformatDateTime('MMM dd, yyyy') ?> to <? @sys-date[1].reformatDateTime('MMM dd, yyyy') ?>"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_60_1547367224938",
+      "context": {
+        "action": "VIEW_EXPENSE",
+        "end_date": "@sys-date[1] 23:59:59",
+        "start_date": "@sys-date[0] 00:00:00"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1546827563316"
+      },
+      "conditions": "@sys-date.length > 1",
+      "dialog_node": "node_68_1547368967946",
+      "previous_sibling": "node_61_1547367299950"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Here are your expense transactions from  @sys-date to <? now().reformatDateTime('MMM dd, yyyy') ?>:"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_60_1547367224938",
+      "context": {
+        "action": "VIEW_EXPENSE",
+        "end_date": "<? now() ?> ",
+        "start_date": "@sys-date 00:00:00"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1546827563316"
+      },
+      "conditions": "@sys-date.length == 1",
+      "dialog_node": "node_61_1547367299950",
+      "previous_sibling": "node_1_1547430046434"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_60_1547367224938",
+      "metadata": {},
+      "variable": "$start_date",
+      "dialog_node": "slot_65_1547368207754",
+      "previous_sibling": "node_68_1547368967946"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Sorry, please enter a past date (with year) or the date today."
+              },
+              {
+                "text": "Would you like to try again?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "title": "",
+            "options": [
+              {
+                "label": "Yes, please list my expenses",
+                "value": {
+                  "input": {
+                    "text": "Yes, please list my expenses"
+                  }
+                }
+              },
+              {
+                "label": "No, I want to do something else.",
+                "value": {
+                  "input": {
+                    "text": "No, I want to do something else."
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_60_1547367224938",
+      "context": {
+        "action": "START_OVER",
+        "end_date": null,
+        "start_date": null
+      },
+      "metadata": {},
+      "conditions": "@sys-date > now() || @sys-date[1] > now()",
+      "dialog_node": "node_1_1547430046434"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_11_1547484583985",
+      "context": {
+        "amount": "@sys-number"
+      },
+      "metadata": {},
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_12_1547484583985",
+      "previous_sibling": "handler_13_1547484583985"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": "How much did you save now?"
+      },
+      "parent": "slot_11_1547484583985",
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_13_1547484583985"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_78_1547489047621",
+      "event_name": "focus",
+      "dialog_node": "handler_80_1547489047621",
+      "previous_sibling": "handler_79_1547489047621"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_78_1547489047621",
+      "context": {
+        "end_date": "@sys-date[1]"
+      },
+      "metadata": {},
+      "conditions": "@sys-date[1]",
+      "event_name": "input",
+      "dialog_node": "handler_79_1547489047621"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I recorded that you spent $amount on @luxuries"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_12_1546573939551",
+      "context": {
+        "action": "ADD_EXPENSE",
+        "category": "luxuries",
+        "description": "<? input.text ?>"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1546827563316"
+      },
+      "conditions": "@luxuries",
+      "dialog_node": "node_2_1547495267394",
+      "previous_sibling": "node_1_1547495190052"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_12_1546573939551",
+      "metadata": {},
+      "variable": "$category",
+      "dialog_node": "slot_49_1547365206896",
+      "previous_sibling": "slot_46_1547365195264"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "title": "Which category do you want me to add this expense?",
+            "options": [
+              {
+                "label": "Food",
+                "value": {
+                  "input": {
+                    "text": "Food"
+                  }
+                }
+              },
+              {
+                "label": "General",
+                "value": {
+                  "input": {
+                    "text": "General"
+                  }
+                }
+              },
+              {
+                "label": "Utilities",
+                "value": {
+                  "input": {
+                    "text": "Utilities"
+                  }
+                }
+              },
+              {
+                "label": "Transportation",
+                "value": {
+                  "input": {
+                    "text": "Transportation"
+                  }
+                }
+              },
+              {
+                "label": "Luxuries",
+                "value": {
+                  "input": {
+                    "text": "Luxuries"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "parent": "node_12_1546573939551",
+      "context": {
+        "amount": "$amount",
+        "description": "$amount"
+      },
+      "metadata": {},
+      "conditions": "!$category && $amount",
+      "dialog_node": "node_23_1546850034904",
+      "previous_sibling": "node_75_1546851761521"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I recorded that you spent $amount on @utilities"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_12_1546573939551",
+      "context": {
+        "action": "ADD_EXPENSE",
+        "category": "utilities",
+        "description": "<? input.text ?>"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1546827563316"
+      },
+      "conditions": "@utilities",
+      "dialog_node": "node_3_1547495316715",
+      "previous_sibling": "node_2_1547495267394"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_12_1546573939551",
+      "metadata": {},
+      "variable": "$category",
+      "dialog_node": "slot_40_1547365175776",
+      "previous_sibling": "slot_37_1547365155359"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_12_1546573939551",
+      "metadata": {},
+      "variable": "$category",
+      "dialog_node": "slot_43_1547365187040",
+      "previous_sibling": "slot_40_1547365175776"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I recorded that you spent $amount on @transportation"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_12_1546573939551",
+      "context": {
+        "action": "ADD_EXPENSE",
+        "category": "transportation",
+        "description": "<? input.text ?>"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1546827563316"
+      },
+      "conditions": "@transportation",
+      "dialog_node": "node_4_1547495360402",
+      "previous_sibling": "node_3_1547495316715"
+    },
+    {
+      "type": "event_handler",
+      "parent": "node_12_1546573939551",
+      "metadata": {},
+      "event_name": "focus",
+      "dialog_node": "handler_30_1546850318671",
+      "previous_sibling": "node_4_1547495360402"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I recorded that you spent $amount on @general"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_12_1546573939551",
+      "context": {
+        "action": "ADD_EXPENSE",
+        "category": "general",
+        "description": "<? input.text ?>"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1546827563316"
+      },
+      "conditions": "@general",
+      "dialog_node": "node_1_1547495190052",
+      "previous_sibling": "node_15_1547358327538"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_12_1546573939551",
+      "metadata": {},
+      "variable": "$amount",
+      "dialog_node": "slot_17_1546847532143",
+      "previous_sibling": "slot_49_1547365206896"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I recorded that you spent $amount on @food"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_12_1546573939551",
+      "context": {
+        "action": "ADD_EXPENSE",
+        "category": "food",
+        "description": "<? input.text ?>"
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1546827563316"
+      },
+      "conditions": "@food",
+      "dialog_node": "node_15_1547358327538",
+      "previous_sibling": "node_23_1546850034904"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_12_1546573939551",
+      "metadata": {},
+      "variable": "$category",
+      "dialog_node": "slot_37_1547365155359",
+      "previous_sibling": "handler_30_1546850318671"
+    },
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_12_1546573939551",
+      "metadata": {},
+      "variable": "$category",
+      "dialog_node": "slot_46_1547365195264",
+      "previous_sibling": "slot_43_1547365187040"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I recorded that you spent $amount on $category expenses"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_12_1546573939551",
+      "context": {
+        "action": "ADD_EXPENSE",
+        "amount": "$amount",
+        "category": "@food@transportation@utilities@general@luxuries",
+        "description": "$amount on $category"
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_1_1546827563316"
+      },
+      "conditions": "!$action && @transportation || @utilities || @general || @luxuries || @food",
+      "dialog_node": "node_75_1546851761521",
+      "digress_out": "allow_all"
+    },
+    {
+      "type": "folder",
+      "title": "Actions",
+      "metadata": {},
+      "dialog_node": "node_5_1547175134818",
+      "previous_sibling": "node_1_1546827563316"
+    },
+    {
+      "type": "frame",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "What do you want me to do with that?"
+              },
+              {
+                "text": "So, do you want me to?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          },
+          {
+            "title": "Action Types",
+            "options": [
+              {
+                "label": "Add to expense",
+                "value": {
+                  "input": {
+                    "text": "Add to expense"
+                  }
+                }
+              },
+              {
+                "label": "Add to income",
+                "value": {
+                  "input": {
+                    "text": "Add to income"
+                  }
+                }
+              },
+              {
+                "label": "Add to savings",
+                "value": {
+                  "input": {
+                    "text": "Add to savings"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          },
+          {
+            "title": "text",
+            "options": [
+              {
+                "label": "option1",
+                "value": {
+                  "input": {
+                    "text": "1"
+                  }
+                }
+              },
+              {
+                "label": "option2",
+                "value": {
+                  "input": {
+                    "text": "2"
+                  }
+                }
+              }
+            ],
+            "description": "for testing purposes only",
+            "response_type": "option"
+          }
+        ]
+      },
+      "context": {
+        "action": "null",
+        "number": "@sys-number",
+        "category": "@food@transportation@utilities@general@luxuries"
+      },
+      "metadata": {
+        "fallback": "leave"
+      },
+      "conditions": "#Ambiguous_Statements",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_1_1546997008084",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_1_1547089893374",
+      "digress_out_slots": "not_allowed"
+    },
+    {
+      "type": "folder",
+      "title": "User Tutorial",
+      "metadata": {},
+      "conditions": "#User_Tutorial",
+      "dialog_node": "node_2_1547444226190",
+      "previous_sibling": "node_2_1547355540512"
+    },
+    {
+      "type": "standard",
+      "title": "Record Another",
+      "output": {
+        "generic": [
+          {
+            "title": "Do you want to do something else?",
+            "options": [
+              {
+                "label": "Yes",
+                "value": {
+                  "input": {
+                    "text": "Yes"
+                  }
+                }
+              },
+              {
+                "label": "No",
+                "value": {
+                  "input": {
+                    "text": "No"
+                  }
+                }
+              }
+            ],
+            "response_type": "option"
+          }
+        ]
+      },
+      "metadata": {
+        "fallback": "leave",
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_1_1546829529991"
+      },
+      "conditions": "$action",
+      "digress_in": "not_available",
+      "dialog_node": "node_1_1546827563316",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_1_1546997008084"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Let's start over."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "Welcome"
+      },
+      "conditions": "#Bot_Control_Ignore_Undo || #Bot_Control_Start_Over",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_2_1546914023270",
+      "previous_sibling": "node_5_1547175134818"
+    },
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Sorry, I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Sorry, Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "Sorry, I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_2_1546914023270"
+    },
+    {
+      "type": "folder",
+      "title": "General",
+      "metadata": {},
+      "digress_in": "does_not_return",
+      "dialog_node": "node_3_1547089558095",
+      "previous_sibling": "node_2_1547444226190"
+    },
+    {
+      "type": "folder",
+      "title": "Bot Functions",
+      "metadata": {},
+      "digress_in": "does_not_return",
+      "dialog_node": "node_1_1547089893374",
+      "previous_sibling": "node_3_1547089558095"
+    },
+    {
+      "type": "folder",
+      "title": "Welcome",
+      "metadata": {},
+      "dialog_node": "node_2_1547355540512"
+    }
+  ],
+  "workspace_id": "2c956502-fcc6-45fc-80a5-46a1a17b95f6",
+  "counterexamples": [
+    {
+      "text": "Budget"
+    },
+    {
+      "text": "expense"
+    },
+    {
+      "text": "Income"
+    },
+    {
+      "text": "Savings Goal"
+    }
+  ],
+  "system_settings": {
+    "tooling": {
+      "store_generic_responses": true
+    }
+  },
+  "learning_opt_out": false,
+  "status": "Available"
+}
