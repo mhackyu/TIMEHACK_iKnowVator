@@ -1,0 +1,5 @@
+---
+applications:
+ - name: Sabrina API
+   random-route: false
+   memory: 256M
