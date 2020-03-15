@@ -16,6 +16,20 @@ module.exports.create = data => {
   });
 };
 
+module.exports.c = data => {
+  const ACTION = '[create]';
+  logger.info(`${TAG}${ACTION} args - ${JSON.stringify(data)}`);
+  return new Promise((resolve, reject) => {
+    db.execute('INSERT INTO income SET ?', data)
+      .then(data => {
+        resolve(data);
+      })
+      .catch(err => {
+        reject(errors.raise('INTERNAL_SERVER_ERROR'));
+      });
+  });
+};
+
 module.exports.getAllByUser = uid => {
   const ACTION = '[getAll]';
   logger.info(`${TAG}${ACTION} args - ${uid}`);

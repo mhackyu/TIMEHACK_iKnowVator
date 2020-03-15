@@ -8,7 +8,7 @@ require('dotenv').config();
 router.get(
   '/google',
   auth.authenticate('google', {
-    scope: ['https://www.googleapis.com/auth/plus.login']
+    scope: ['profile', 'email']
   })
 );
 
